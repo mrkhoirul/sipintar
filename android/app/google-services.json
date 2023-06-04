@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1041087192938",
+    "project_id": "sipintar-fe08d",
+    "storage_bucket": "sipintar-fe08d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041087192938:android:859a1451de1c721f0c0f13",
+        "android_client_info": {
+          "package_name": "com.example.sipintar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvki31Zaj2z7Uuqs2qQ1BHxJXymTHIFj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
