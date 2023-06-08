@@ -2,11 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'users/login.dart';
-import 'mapel/language.dart';
-import 'mapel/art.dart';
-import 'mapel/sport.dart';
-import 'mapel/religion.dart';
-import 'mapel/social.dart';
 import 'mapel/it.dart';
 import 'mapel/science.dart';
 import 'mapel/math.dart';
@@ -93,7 +88,8 @@ class _HomePageState extends State<HomePage> {
                                           items: [
                                             PopupMenuItem(
                                                 value: 'profile',
-                                                onTap: () => Get.to(const ProfilePage()),
+                                                onTap: () =>
+                                                    Get.to(const ProfilePage()),
                                                 child: Row(
                                                   children: const [
                                                     Icon(
@@ -216,273 +212,67 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                GestureDetector(
-                                    onTap: () => Navigator.push(context,
-                                            MaterialPageRoute(
-                                          builder: (context) {
-                                            return const MathPage();
-                                          },
-                                        )),
-                                    child: const SizedBox(
-                                        width: double.infinity,
-                                        height: 40,
-                                        child: Text(
-                                          "Math",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 30),
-                                        )))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  width: double.infinity,
-                                  height: 40,
-                                  child: GestureDetector(
-                                    onTap: () => Navigator.push(
+            child: Row(
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(30),
+                  height: 100,
+                  width: 150,
+                  color: Colors.white,
+                  child: GestureDetector(
+                    onTap: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (builder) =>
+                                                const MathPage())),
+                    child: const Text(
+                      "Math",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(30),
+                  height: 100,
+                  width: 150,
+                  color: Colors.white,
+                  child: GestureDetector(
+                    onTap: () => Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (builder) =>
                                                 const SciencePage())),
-                                    child: const Text(
-                                      "Science",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  width: double.infinity,
-                                  height: 40,
-                                  child: GestureDetector(
-                                    onTap: () => Navigator.push(
+                    child: const Text(
+                      "Science",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(30),
+                  height: 100,
+                  width: 150,
+                  color: Colors.white,
+                  child: GestureDetector(
+                    onTap: () => Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (builder) =>
                                                 const ItPage())),
-                                    child: const Text(
-                                      "IT",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                    width: double.infinity,
-                                    height: 40,
-                                    child: GestureDetector(
-                                      onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (builder) =>
-                                                  const ArtPage())),
-                                      child: const Text(
-                                        "Art",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(fontSize: 30),
-                                      ),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                    width: double.infinity,
-                                    height: 40,
-                                    child: GestureDetector(
-                                      onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (builder) =>
-                                                  const SocialPage())),
-                                      child: const Text(
-                                        "Social",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(fontSize: 30),
-                                      ),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                    width: double.infinity,
-                                    height: 40,
-                                    child: GestureDetector(
-                                      onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (builder) =>
-                                                  const LanguagePage())),
-                                      child: const Text(
-                                        "Language",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(fontSize: 30),
-                                      ),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                    width: double.infinity,
-                                    height: 40,
-                                    child: GestureDetector(
-                                      onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (builder) =>
-                                                  const ReligionPage())),
-                                      child: const Text(
-                                        "Religion",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(fontSize: 30),
-                                      ),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                    width: double.infinity,
-                                    height: 40,
-                                    child: GestureDetector(
-                                      onTap: () => Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (builder) =>
-                                                  const SportPage())),
-                                      child: const Text(
-                                        "Sport",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(fontSize: 30),
-                                      ),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
-                      ))
-                ],
-              ),
-            ),
+                    child: const Text(
+                      "IT",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                ),
+              ],
+            )
           ),
           const Padding(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.symmetric(vertical: 0.0),
             child: Text(
               "My Course",
               style: TextStyle(
@@ -492,176 +282,48 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Expanded(
-              child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(
-                    width: 300,
-                    height: 50,
-                    child: Stack(
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          elevation: 10,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 40,
-                                child: GestureDetector(
-                                  onTap: () =>
-                                      Navigator.push(context, MaterialPageRoute(
-                                    builder: (context) {
-                                      return const MathPage();
-                                    },
-                                  )),
-                                  child: const Text(
-                                    "Math",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(fontSize: 30),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    )),
-                SizedBox(
-                    width: 300,
-                    height: 50,
-                    child: Stack(
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          elevation: 10,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 40,
-                                child: GestureDetector(
-                                  onTap: () => Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (builder) =>
-                                              const SciencePage())),
-                                  child: const Text(
-                                    "Science",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(fontSize: 30),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    )),
-                SizedBox(
-                    width: 300,
-                    height: 50,
-                    child: Stack(
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          elevation: 10,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: 40,
-                                child: GestureDetector(
-                                  onTap: () => Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (builder) =>
-                                              const ItPage())),
-                                  child: const Text(
-                                    "IT",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(fontSize: 30),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    )),
-                SizedBox(
-                    width: 300,
-                    height: 50,
-                    child: Stack(
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          elevation: 10,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                  width: double.infinity,
-                                  height: 40,
-                                  child: GestureDetector(
-                                    onTap: () => Navigator.push(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(30),
+                  height: 100,
+                  width: 150,
+                  color: Colors.white,
+                  child: GestureDetector(
+                    onTap: () => Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (builder) =>
-                                                const LanguagePage())),
-                                    child: const Text(
-                                      "Language",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                  ))
-                            ],
-                          ),
-                        )
-                      ],
-                    )),
-                SizedBox(
-                    width: 300,
-                    height: 50,
-                    child: Stack(
-                      children: [
-                        Card(
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30)),
-                          elevation: 10,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                  width: double.infinity,
-                                  height: 40,
-                                  child: GestureDetector(
-                                    onTap: () => Navigator.push(
+                                                const MathPage())),
+                    child: const Text(
+                      "Math",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(30),
+                  height: 100,
+                  width: 150,
+                  color: Colors.white,
+                  child: GestureDetector(
+                    onTap: () => Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (builder) =>
-                                                const SocialPage())),
-                                    child: const Text(
-                                      "Social",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                  ))
-                            ],
-                          ),
-                        )
-                      ],
-                    ))
+                                                const ItPage())),
+                    child: const Text(
+                      "IT",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                ),
               ],
-            ),
-          ))
+            )
+          ),
         ],
       ),
     );

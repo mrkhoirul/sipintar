@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import '../mapel/submapel.dart';
 
 class MathPage extends StatefulWidget {
   const MathPage({super.key});
@@ -77,20 +78,23 @@ class _MathPageState extends State<MathPage> {
                                       onTapDown: (detail) {
                                         showMenu(
                                             context: context,
-                                            position: const RelativeRect.fromLTRB(
-                                                75.0, 75.0, 0.0, 0.0),
+                                            position:
+                                                const RelativeRect.fromLTRB(
+                                                    75.0, 75.0, 0.0, 0.0),
                                             shape: const RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(10.0))),
                                             items: [
                                               PopupMenuItem(
                                                   value: 'profile',
-                                                  onTap: () => Get.to(const ProfilePage()),
+                                                  onTap: () => Get.to(
+                                                      const ProfilePage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.person,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -106,12 +110,14 @@ class _MathPageState extends State<MathPage> {
                                                   )),
                                               PopupMenuItem(
                                                   value: 'logout',
-                                                  onTap: () => Get.to(const LoginPage()),
+                                                  onTap: () =>
+                                                      Get.to(const LoginPage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.logout,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -136,7 +142,8 @@ class _MathPageState extends State<MathPage> {
                                                 'Hai, user!',
                                                 style: TextStyle(
                                                     color: Color(0xFF22355C),
-                                                    fontWeight: FontWeight.bold),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )),
                                           Icon(
                                             Icons.person,
@@ -187,135 +194,101 @@ class _MathPageState extends State<MathPage> {
               ),
             ),
             SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Calculus",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
+                      width: 300,
+                      height: 50,
+                      child: Stack(
+                        children: [
+                          Card(
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            elevation: 10,
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                    onTap: () => Navigator.push(context,
+                                            MaterialPageRoute(
+                                          builder: (context) {
+                                            return const SubMapelPage();
+                                          },
+                                        )),
+                                    child: const SizedBox(
+                                        width: double.infinity,
+                                        height: 40,
+                                        child: Text(
+                                          "Calculus",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 30),
+                                        )))
+                              ],
                             ),
                           )
                         ],
-                      ),
-                    )
-                  ],
-                )),
+                      )),
             SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Algebra",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
+                      width: 300,
+                      height: 50,
+                      child: Stack(
+                        children: [
+                          Card(
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            elevation: 10,
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                    onTap: () => Navigator.push(context,
+                                            MaterialPageRoute(
+                                          builder: (context) {
+                                            return const SubMapelPage();
+                                          },
+                                        )),
+                                    child: const SizedBox(
+                                        width: double.infinity,
+                                        height: 40,
+                                        child: Text(
+                                          "Algebra",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 30),
+                                        )))
+                              ],
                             ),
                           )
                         ],
-                      ),
-                    )
-                  ],
-                )),
+                      )),
             SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Trigonometry",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
+                      width: 300,
+                      height: 50,
+                      child: Stack(
+                        children: [
+                          Card(
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            elevation: 10,
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                    onTap: () => Navigator.push(context,
+                                            MaterialPageRoute(
+                                          builder: (context) {
+                                            return const SubMapelPage();
+                                          },
+                                        )),
+                                    child: const SizedBox(
+                                        width: double.infinity,
+                                        height: 40,
+                                        child: Text(
+                                          "Trigonometry",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 30),
+                                        )))
+                              ],
                             ),
                           )
                         ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Geometry",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Algorithm",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ))
+                      )),
           ],
         ),
       ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '../submapel/question.dart';
+import 'package:sipintar/mapel/math.dart';
 
-class SubMapelPage extends StatefulWidget {
-  const SubMapelPage({super.key});
+class QuestionPage extends StatefulWidget {
+  const QuestionPage({super.key});
 
   @override
-  State<SubMapelPage> createState() => _SubMapelPageState();
+  State<QuestionPage> createState() => _QuestionPageState();
 }
 
-class _SubMapelPageState extends State<SubMapelPage> {
+class _QuestionPageState extends State<QuestionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,7 +106,7 @@ class _SubMapelPageState extends State<SubMapelPage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
-                "Group of question",
+                "Trigonometry",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class _SubMapelPageState extends State<SubMapelPage> {
                               onTap: () =>
                                   Navigator.push(context, MaterialPageRoute(
                                     builder: (context) {
-                                      return const QuestionPage();
+                                      return const MathPage();
                                     },
                                   )),
                               child: const SizedBox(
