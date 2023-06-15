@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
-import '../mapel/submapel.dart';
+import '../submapel/calculus.dart';
+import '../submapel/algebra.dart';
 
 class MathPage extends StatefulWidget {
   const MathPage({super.key});
@@ -209,7 +210,7 @@ class _MathPageState extends State<MathPage> {
                                     onTap: () => Navigator.push(context,
                                             MaterialPageRoute(
                                           builder: (context) {
-                                            return const SubMapelPage();
+                                            return const CalculusPage();
                                           },
                                         )),
                                     child: const SizedBox(
@@ -241,7 +242,7 @@ class _MathPageState extends State<MathPage> {
                                     onTap: () => Navigator.push(context,
                                             MaterialPageRoute(
                                           builder: (context) {
-                                            return const SubMapelPage();
+                                            return const AlgebraPage();
                                           },
                                         )),
                                     child: const SizedBox(
@@ -257,38 +258,7 @@ class _MathPageState extends State<MathPage> {
                           )
                         ],
                       )),
-            SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                GestureDetector(
-                                    onTap: () => Navigator.push(context,
-                                            MaterialPageRoute(
-                                          builder: (context) {
-                                            return const SubMapelPage();
-                                          },
-                                        )),
-                                    child: const SizedBox(
-                                        width: double.infinity,
-                                        height: 40,
-                                        child: Text(
-                                          "Trigonometry",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 30),
-                                        )))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
+            
           ],
         ),
       ),

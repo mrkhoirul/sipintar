@@ -252,13 +252,13 @@ class _HomePageState extends State<HomePage> {
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "16 Fakta Unik tentang Matematika Ini Bikin Kamu Senyum-senyum Dikulum",
+                              "Kunci Jawaban Matematika Kelas 7 Semester 2 Uji Kompetensi 7 Halaman 178 179 180: Uraian",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.kalderanews.com/2020/07/16-fakta-unik-tentang-matematika-ini-bikin-kamu-senyum-senyum-dikulum/';
+                                  'https://bali.tribunnews.com/2023/06/15/kunci-jawaban-matematika-kelas-7-semester-2-uji-kompetensi-7-halaman-178-179-180-uraian';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -363,19 +363,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/event.jpg'),
+                                        AssetImage('assets/images/sains4.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "16 Fakta Unik tentang Matematika Ini Bikin Kamu Senyum-senyum Dikulum",
+                              "11 Fakta Menakjubkan tentang Sains buat kamu tercengang",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.kalderanews.com/2020/07/16-fakta-unik-tentang-matematika-ini-bikin-kamu-senyum-senyum-dikulum/';
+                                  'https://edukasi.okezone.com/read/2022/01/24/623/2536939/11-fakta-menakjubkan-tentang-sains';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -392,19 +392,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/event2.jpg'),
+                                        AssetImage('assets/images/sains1.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Cerita unik tentang matematika (fakta matematika)",
+                              "Fakta-Fakta Unik Sains yang Belum Banyak Diketahui, Penasaran? Yuk Cek Sekarang",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
+                                  'https://peristiwa.info/10613/fakta-fakta-unik-sains-yang-belum-banyak-diketahui-penasaran-yuk-cek-sekarang/';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -421,19 +421,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/even.jpeg'),
+                                        AssetImage('assets/images/sains3.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Apa yang unik tentang matematika yang mayoritas orang tidak tahu?",
+                              "10 Fakta Sains tentang Otak Manusia, Kamu Sudah Tahu?",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
+                                  'https://www.detik.com/edu/detikpedia/d-6538792/10-fakta-sains-tentang-otak-manusia-kamu-sudah-tahu';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -450,19 +450,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains2.jpg'),
+                                        AssetImage('assets/images/sains5.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Fakta Unik dan Keajaiban Tentang Matematika",
+                              "9 Fakta Unik Dunia Sains Yang Lucu Dan Mengagetkan. Benarkah Unicorn Itu Nyata?",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
+                                  'https://berita.99.co/fakta-unik-dunia-sains/';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -480,19 +480,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/event.jpg'),
+                                        AssetImage('assets/images/it1.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "16 Fakta Unik tentang Matematika Ini Bikin Kamu Senyum-senyum Dikulum",
+                              "Chat GPT, Berkah Atau Musibah?",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.kalderanews.com/2020/07/16-fakta-unik-tentang-matematika-ini-bikin-kamu-senyum-senyum-dikulum/';
+                                  'https://bbpmpjateng.kemdikbud.go.id/chat-gpt-berkah-atau-musibah/';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -509,19 +509,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/event2.jpg'),
+                                        AssetImage('assets/images/it2.png'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Cerita unik tentang matematika (fakta matematika)",
+                              "Menjanjikan! Ini Fakta Prospek Karir Bidang IT dan Telekomunikasi",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
+                                  'https://toghr.com/it-dan-telekomunikasi/';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -538,19 +538,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/even.jpeg'),
+                                        AssetImage('assets/images/it3.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Apa yang unik tentang matematika yang mayoritas orang tidak tahu?",
+                              "5 Fakta Perkembangan IT di Indonesia, Tertarik Bekerja di Bidang Ini?",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
+                                  'https://www.idntimes.com/life/career/muhammad-tarmizi-murdianto/fakta-perkembangan-it-di-indonesia';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }
@@ -567,19 +567,19 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains2.jpg'),
+                                        AssetImage('assets/images/it4.png'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Fakta Unik dan Keajaiban Tentang Matematika",
+                              "Apa Aja Sih Plus Minus Kerja di bidang IT?",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
                               const url =
-                                  'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
+                                  'https://blog.klob.id/2022/06/17/apa-aja-sih-plus-minus-kerja-di-bidang-it/';
                               // if (!await launchUrl(Uri.parse(url))) {
                               //   throw 'Could not launch $url';
                               // }

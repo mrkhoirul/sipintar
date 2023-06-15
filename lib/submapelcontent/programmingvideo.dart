@@ -3,14 +3,14 @@ import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
 
-class SportPage extends StatefulWidget {
-  const SportPage({super.key});
+class ProgrammingVideoPage extends StatefulWidget {
+  const ProgrammingVideoPage({super.key});
 
   @override
-  State<SportPage> createState() => _SportPageState();
+  State<ProgrammingVideoPage> createState() => _ProgrammingVideoPageState();
 }
 
-class _SportPageState extends State<SportPage> {
+class _ProgrammingVideoPageState extends State<ProgrammingVideoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _SportPageState extends State<SportPage> {
             Stack(
               children: [
                 Container(
-                  height: 135,
+                  height: 140,
                   width: double.infinity,
                   color: const Color(0xFF021E35),
                 ),
@@ -39,8 +39,8 @@ class _SportPageState extends State<SportPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.topLeft,
-                                  height: 60,
-                                  width: 60,
+                                  height: 45,
+                                  width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
@@ -54,7 +54,7 @@ class _SportPageState extends State<SportPage> {
                                 const Text(
                                   "SiPintar",
                                   style: TextStyle(
-                                      color: Color(0xFF021E35),
+                                      color: Colors.white,
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
                                 )
@@ -86,7 +86,8 @@ class _SportPageState extends State<SportPage> {
                                             items: [
                                               PopupMenuItem(
                                                   value: 'profile',
-                                                  onTap: () => Get.to(const ProfilePage()),
+                                                  onTap: () => Get.to(
+                                                      const ProfilePage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
@@ -184,117 +185,13 @@ class _SportPageState extends State<SportPage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
-                "SPORT",
+                "Programming Tutorial Video",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 2, 30, 53)),
               ),
             ),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Basketball",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Football",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Tennis",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Climbing",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
           ],
         ),
       ),

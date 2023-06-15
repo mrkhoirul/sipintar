@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import '../submapel/biology.dart';
+import '../submapel/chemistry.dart';
+import '../submapel/physics.dart';
 
 class SciencePage extends StatefulWidget {
   const SciencePage({super.key});
@@ -187,83 +190,101 @@ class _SciencePageState extends State<SciencePage> {
               ),
             ),
             SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Physics",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
+                      width: 300,
+                      height: 50,
+                      child: Stack(
+                        children: [
+                          Card(
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            elevation: 10,
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                    onTap: () => Navigator.push(context,
+                                            MaterialPageRoute(
+                                          builder: (context) {
+                                            return const PhysicsPage();
+                                          },
+                                        )),
+                                    child: const SizedBox(
+                                        width: double.infinity,
+                                        height: 40,
+                                        child: Text(
+                                          "Physics",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 30),
+                                        )))
+                              ],
                             ),
                           )
                         ],
-                      ),
-                    )
-                  ],
-                )),
+                      )),
             SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Chemistry",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
+                      width: 300,
+                      height: 50,
+                      child: Stack(
+                        children: [
+                          Card(
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            elevation: 10,
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                    onTap: () => Navigator.push(context,
+                                            MaterialPageRoute(
+                                          builder: (context) {
+                                            return const ChemisrtyPage();
+                                          },
+                                        )),
+                                    child: const SizedBox(
+                                        width: double.infinity,
+                                        height: 40,
+                                        child: Text(
+                                          "Chemistry",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 30),
+                                        )))
+                              ],
                             ),
                           )
                         ],
-                      ),
-                    )
-                  ],
-                )),
+                      )),
             SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Biology",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
+                      width: 300,
+                      height: 50,
+                      child: Stack(
+                        children: [
+                          Card(
+                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30)),
+                            elevation: 10,
+                            child: Column(
+                              children: [
+                                GestureDetector(
+                                    onTap: () => Navigator.push(context,
+                                            MaterialPageRoute(
+                                          builder: (context) {
+                                            return const BiologyPage();
+                                          },
+                                        )),
+                                    child: const SizedBox(
+                                        width: double.infinity,
+                                        height: 40,
+                                        child: Text(
+                                          "Biology",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(fontSize: 30),
+                                        )))
+                              ],
                             ),
                           )
                         ],
-                      ),
-                    )
-                  ],
-                )),
+                      )),
           ],
         ),
       ),

@@ -3,14 +3,14 @@ import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
 
-class ReligionPage extends StatefulWidget {
-  const ReligionPage({super.key});
+class ProgrammingCodePage extends StatefulWidget {
+  const ProgrammingCodePage({super.key});
 
   @override
-  State<ReligionPage> createState() => _ReligionPageState();
+  State<ProgrammingCodePage> createState() => _ProgrammingCodePageState();
 }
 
-class _ReligionPageState extends State<ReligionPage> {
+class _ProgrammingCodePageState extends State<ProgrammingCodePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _ReligionPageState extends State<ReligionPage> {
             Stack(
               children: [
                 Container(
-                  height: 135,
+                  height: 140,
                   width: double.infinity,
                   color: const Color(0xFF021E35),
                 ),
@@ -39,8 +39,8 @@ class _ReligionPageState extends State<ReligionPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.topLeft,
-                                  height: 60,
-                                  width: 60,
+                                  height: 45,
+                                  width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
@@ -54,7 +54,7 @@ class _ReligionPageState extends State<ReligionPage> {
                                 const Text(
                                   "SiPintar",
                                   style: TextStyle(
-                                      color: Color(0xFF021E35),
+                                      color: Colors.white,
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
                                 )
@@ -77,20 +77,23 @@ class _ReligionPageState extends State<ReligionPage> {
                                       onTapDown: (detail) {
                                         showMenu(
                                             context: context,
-                                            position: const RelativeRect.fromLTRB(
-                                                75.0, 75.0, 0.0, 0.0),
+                                            position:
+                                                const RelativeRect.fromLTRB(
+                                                    75.0, 75.0, 0.0, 0.0),
                                             shape: const RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(10.0))),
                                             items: [
                                               PopupMenuItem(
                                                   value: 'profile',
-                                                  onTap: () => Get.to(const ProfilePage()),
+                                                  onTap: () => Get.to(
+                                                      const ProfilePage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.person,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -106,12 +109,14 @@ class _ReligionPageState extends State<ReligionPage> {
                                                   )),
                                               PopupMenuItem(
                                                   value: 'logout',
-                                                  onTap: () => Get.to(const LoginPage()),
+                                                  onTap: () =>
+                                                      Get.to(const LoginPage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.logout,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -136,7 +141,8 @@ class _ReligionPageState extends State<ReligionPage> {
                                                 'Hai, user!',
                                                 style: TextStyle(
                                                     color: Color(0xFF22355C),
-                                                    fontWeight: FontWeight.bold),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )),
                                           Icon(
                                             Icons.person,
@@ -179,117 +185,13 @@ class _ReligionPageState extends State<ReligionPage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
-                "RELIGION",
+                "Programming Code",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 2, 30, 53)),
               ),
             ),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Islam",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Christian",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Budha",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Hindu",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
           ],
         ),
       ),

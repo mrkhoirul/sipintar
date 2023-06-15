@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import '../submapelcontent/physicsvideo.dart';
+import '../submapelcontent/physicsformula.dart';
+import '../submapelcontent/physicstheory.dart';
 
-class ArtPage extends StatefulWidget {
-  const ArtPage({super.key});
+class PhysicsPage extends StatefulWidget {
+  const PhysicsPage({super.key});
 
   @override
-  State<ArtPage> createState() => _ArtPageState();
+  State<PhysicsPage> createState() => _PhysicsPageState();
 }
 
-class _ArtPageState extends State<ArtPage> {
+class _PhysicsPageState extends State<PhysicsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +24,7 @@ class _ArtPageState extends State<ArtPage> {
             Stack(
               children: [
                 Container(
-                  height: 135,
+                  height: 140,
                   width: double.infinity,
                   color: const Color(0xFF021E35),
                 ),
@@ -39,8 +42,8 @@ class _ArtPageState extends State<ArtPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.topLeft,
-                                  height: 60,
-                                  width: 60,
+                                  height: 45,
+                                  width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
@@ -54,7 +57,7 @@ class _ArtPageState extends State<ArtPage> {
                                 const Text(
                                   "SiPintar",
                                   style: TextStyle(
-                                      color: Color(0xFF021E35),
+                                      color: Colors.white,
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
                                 )
@@ -77,20 +80,23 @@ class _ArtPageState extends State<ArtPage> {
                                       onTapDown: (detail) {
                                         showMenu(
                                             context: context,
-                                            position: const RelativeRect.fromLTRB(
-                                                75.0, 75.0, 0.0, 0.0),
+                                            position:
+                                                const RelativeRect.fromLTRB(
+                                                    75.0, 75.0, 0.0, 0.0),
                                             shape: const RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(10.0))),
                                             items: [
                                               PopupMenuItem(
                                                   value: 'profile',
-                                                  onTap: () => Get.to(const ProfilePage()),
+                                                  onTap: () => Get.to(
+                                                      const ProfilePage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.person,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -106,12 +112,14 @@ class _ArtPageState extends State<ArtPage> {
                                                   )),
                                               PopupMenuItem(
                                                   value: 'logout',
-                                                  onTap: () => Get.to(const LoginPage()),
+                                                  onTap: () =>
+                                                      Get.to(const LoginPage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.logout,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -136,7 +144,8 @@ class _ArtPageState extends State<ArtPage> {
                                                 'Hai, user!',
                                                 style: TextStyle(
                                                     color: Color(0xFF22355C),
-                                                    fontWeight: FontWeight.bold),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )),
                                           Icon(
                                             Icons.person,
@@ -179,7 +188,7 @@ class _ArtPageState extends State<ArtPage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
-                "ART",
+                "Physics",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -197,16 +206,22 @@ class _ArtPageState extends State<ArtPage> {
                           borderRadius: BorderRadius.circular(30)),
                       elevation: 10,
                       child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Painting",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
+                        children: [
+                          GestureDetector(
+                              onTap: () =>
+                                  Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) {
+                                      return const PhysicsTheoryPage();
+                                    },
+                                  )),
+                              child: const SizedBox(
+                                  width: double.infinity,
+                                  height: 40,
+                                  child: Text(
+                                    "Theory",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 30),
+                                  )))
                         ],
                       ),
                     )
@@ -223,16 +238,22 @@ class _ArtPageState extends State<ArtPage> {
                           borderRadius: BorderRadius.circular(30)),
                       elevation: 10,
                       child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Theater",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
+                        children: [
+                          GestureDetector(
+                              onTap: () =>
+                                  Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) {
+                                      return const PhysicsVideoPage();
+                                    },
+                                  )),
+                              child: const SizedBox(
+                                  width: double.infinity,
+                                  height: 40,
+                                  child: Text(
+                                    "Tutorial Video",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 30),
+                                  )))
                         ],
                       ),
                     )
@@ -249,42 +270,22 @@ class _ArtPageState extends State<ArtPage> {
                           borderRadius: BorderRadius.circular(30)),
                       elevation: 10,
                       child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Dancing",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: const [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: Text(
-                              "Music",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 30),
-                            ),
-                          )
+                        children: [
+                          GestureDetector(
+                              onTap: () =>
+                                  Navigator.push(context, MaterialPageRoute(
+                                    builder: (context) {
+                                      return const PhysicsFormulaPage();
+                                    },
+                                  )),
+                              child: const SizedBox(
+                                  width: double.infinity,
+                                  height: 40,
+                                  child: Text(
+                                    "Formula",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 30),
+                                  )))
                         ],
                       ),
                     )

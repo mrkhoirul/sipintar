@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'users/login.dart';
-import 'mapel/language.dart';
-import 'mapel/social.dart';
-import 'mapel/it.dart';
 import 'mapel/science.dart';
 import 'mapel/math.dart';
 import 'users/profile.dart';
@@ -260,108 +257,6 @@ class _MyCoursePageState extends State<MyCoursePage> {
                     )
                   ],
                 )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: GestureDetector(
-                              onTap: () => 
-                              Navigator.push(context, 
-                                MaterialPageRoute(builder: (builder) => 
-                                  const ItPage()
-                                )
-                              ),
-                              child: const Text(
-                                "IT",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 30),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: GestureDetector(
-                              onTap: () =>
-                              Navigator.push(context, 
-                                MaterialPageRoute(builder: (builder) => 
-                                  const LanguagePage()
-                                )
-                              ),
-                              child: const Text(
-                                "Language",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 30),
-                              ),
-                            )
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )),
-            SizedBox(
-                width: 300,
-                height: 50,
-                child: Stack(
-                  children: [
-                    Card(
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      elevation: 10,
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 40,
-                            child: GestureDetector(
-                              onTap: () =>
-                              Navigator.push(context, 
-                                MaterialPageRoute(builder: (builder) => 
-                                  const SocialPage()
-                                )
-                              ),
-                              child: const Text(
-                                "Social",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 30),
-                              ),
-                            )
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ))
           ],
         ),
       ),

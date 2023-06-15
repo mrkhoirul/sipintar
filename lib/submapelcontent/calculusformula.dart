@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
-import '../submapel/programming.dart';
-import '../submapel/cyber.dart';
 
-class ItPage extends StatefulWidget {
-  const ItPage({super.key});
+class CalculusFormulaPage extends StatefulWidget {
+  const CalculusFormulaPage({super.key});
 
   @override
-  State<ItPage> createState() => _ItPageState();
+  State<CalculusFormulaPage> createState() => _CalculusFormulaPageState();
 }
 
-class _ItPageState extends State<ItPage> {
+class _CalculusFormulaPageState extends State<CalculusFormulaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +21,7 @@ class _ItPageState extends State<ItPage> {
             Stack(
               children: [
                 Container(
-                  height: 135,
+                  height: 140,
                   width: double.infinity,
                   color: const Color(0xFF021E35),
                 ),
@@ -41,8 +39,8 @@ class _ItPageState extends State<ItPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.topLeft,
-                                  height: 60,
-                                  width: 60,
+                                  height: 45,
+                                  width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
                                       image: AssetImage(
@@ -56,7 +54,7 @@ class _ItPageState extends State<ItPage> {
                                 const Text(
                                   "SiPintar",
                                   style: TextStyle(
-                                      color: Color(0xFF021E35),
+                                      color: Colors.white,
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold),
                                 )
@@ -79,20 +77,23 @@ class _ItPageState extends State<ItPage> {
                                       onTapDown: (detail) {
                                         showMenu(
                                             context: context,
-                                            position: const RelativeRect.fromLTRB(
-                                                75.0, 75.0, 0.0, 0.0),
+                                            position:
+                                                const RelativeRect.fromLTRB(
+                                                    75.0, 75.0, 0.0, 0.0),
                                             shape: const RoundedRectangleBorder(
                                                 borderRadius: BorderRadius.all(
                                                     Radius.circular(10.0))),
                                             items: [
                                               PopupMenuItem(
                                                   value: 'profile',
-                                                  onTap: () => Get.to(const ProfilePage()),
+                                                  onTap: () => Get.to(
+                                                      const ProfilePage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.person,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -108,12 +109,14 @@ class _ItPageState extends State<ItPage> {
                                                   )),
                                               PopupMenuItem(
                                                   value: 'logout',
-                                                  onTap: () => Get.to(const LoginPage()),
+                                                  onTap: () =>
+                                                      Get.to(const LoginPage()),
                                                   child: Row(
                                                     children: const [
                                                       Icon(
                                                         Icons.logout,
-                                                        color: Color(0xFF22355C),
+                                                        color:
+                                                            Color(0xFF22355C),
                                                       ),
                                                       Padding(
                                                           padding:
@@ -138,7 +141,8 @@ class _ItPageState extends State<ItPage> {
                                                 'Hai, user!',
                                                 style: TextStyle(
                                                     color: Color(0xFF22355C),
-                                                    fontWeight: FontWeight.bold),
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               )),
                                           Icon(
                                             Icons.person,
@@ -181,77 +185,13 @@ class _ItPageState extends State<ItPage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
-                "IT",
+                "Calculus Formula",
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Color.fromARGB(255, 2, 30, 53)),
               ),
             ),
-            SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                GestureDetector(
-                                    onTap: () => Navigator.push(context,
-                                            MaterialPageRoute(
-                                          builder: (context) {
-                                            return const ProgrammingPage();
-                                          },
-                                        )),
-                                    child: const SizedBox(
-                                        width: double.infinity,
-                                        height: 40,
-                                        child: Text(
-                                          "Programming",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 30),
-                                        )))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
-            SizedBox(
-                      width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                GestureDetector(
-                                    onTap: () => Navigator.push(context,
-                                            MaterialPageRoute(
-                                          builder: (context) {
-                                            return const CyberPage();
-                                          },
-                                        )),
-                                    child: const SizedBox(
-                                        width: double.infinity,
-                                        height: 40,
-                                        child: Text(
-                                          "Cyber Security",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 30),
-                                        )))
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
           ],
         ),
       ),

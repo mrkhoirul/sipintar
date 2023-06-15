@@ -73,6 +73,12 @@ flutter:
     - assets/images/sains1.jpg
     - assets/images/sains2.jpg
     - assets/images/sains3.jpg
+    - assets/images/sains4.jpg
+    - assets/images/sains5.jpg
+    - assets/images/it1.jpg
+    - assets/images/it2.png
+    - assets/images/it3.jpg
+    - assets/images/it4.png
     - assets/images/sosial1.jpg
   fonts:
     - family: Montserrat
