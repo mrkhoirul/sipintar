@@ -353,7 +353,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ])),
                         // Konten untuk Tab 2
-                        Container(
+                         Container(
                             child: ListView(children: [
                           ListTile(
                             leading: Container(
@@ -363,13 +363,13 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains3.jpg'),
+                                        AssetImage('assets/images/event.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "6 Fakta Sains yang Harus Kamu Ketahui Sekali Seumur Hidup",
+                              "16 Fakta Unik tentang Matematika Ini Bikin Kamu Senyum-senyum Dikulum",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
@@ -392,13 +392,13 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains2.jpg'),
+                                        AssetImage('assets/images/event2.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Fakta-Fakta Unik Sains yang Belum Banyak Diketahui, Penasaran? Yuk Cek Sekarang",
+                              "Cerita unik tentang matematika (fakta matematika)",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
@@ -421,13 +421,42 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains1.jpeg'),
+                                        AssetImage('assets/images/even.jpeg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "17 Fakta Unik Sains yang Mungkin Belum Anda Ketahui?",
+                              "Apa yang unik tentang matematika yang mayoritas orang tidak tahu?",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            trailing: const Icon(Icons.arrow_forward),
+                            onTap: () async {
+                              const url =
+                                  'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
+                              // if (!await launchUrl(Uri.parse(url))) {
+                              //   throw 'Could not launch $url';
+                              // }
+                            },
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          ListTile(
+                            leading: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(255, 26, 33, 27),
+                                image: DecorationImage(
+                                    image:
+                                        AssetImage('assets/images/sains2.jpg'),
+                                    fit: BoxFit.cover),
+                              ),
+                            ),
+                            autofocus: true,
+                            subtitle: const Text(
+                              "Fakta Unik dan Keajaiban Tentang Matematika",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
@@ -441,7 +470,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ])),
                         // Konten untuk Tab 3
-                        Container(
+                         Container(
                             child: ListView(children: [
                           ListTile(
                             leading: Container(
@@ -451,13 +480,13 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sosial1.jpg'),
+                                        AssetImage('assets/images/event.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Inilah 5 Fakta Menarik Seputar Dunia Teknologi yang Wajib Kalian Ketahui",
+                              "16 Fakta Unik tentang Matematika Ini Bikin Kamu Senyum-senyum Dikulum",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
@@ -480,13 +509,13 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains2.jpg'),
+                                        AssetImage('assets/images/event2.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "Fakta-Fakta Unik Sains yang Belum Banyak Diketahui, Penasaran? Yuk Cek Sekarang",
+                              "Cerita unik tentang matematika (fakta matematika)",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
@@ -509,13 +538,13 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains1.jpeg'),
+                                        AssetImage('assets/images/even.jpeg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "17 Fakta Unik Sains yang Mungkin Belum Anda Ketahui?",
+                              "Apa yang unik tentang matematika yang mayoritas orang tidak tahu?",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),
@@ -528,7 +557,7 @@ class _HomePageState extends State<HomePage> {
                             },
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 15,
                           ),
                           ListTile(
                             leading: Container(
@@ -538,13 +567,13 @@ class _HomePageState extends State<HomePage> {
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
                                     image:
-                                        AssetImage('assets/images/sains1.jpeg'),
+                                        AssetImage('assets/images/sains2.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
                             autofocus: true,
                             subtitle: const Text(
-                              "17 Fakta Unik Sains yang Mungkin Belum Anda Ketahui?",
+                              "Fakta Unik dan Keajaiban Tentang Matematika",
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             trailing: const Icon(Icons.arrow_forward),

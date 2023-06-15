@@ -159,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
 
     final forgotLabel = GestureDetector(
       child: const Padding(
-        padding: EdgeInsets.only(left: 116.0, right: 116.0),
+        padding: EdgeInsets.only(left: 110, right: 90.0),
         child: Text(
           'Forgot password?',
           style: TextStyle(color: Color(0xFF2985DA)),
@@ -177,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
 
     final dontHaveAccountLabel = GestureDetector(
       child: const Padding(
-        padding: EdgeInsets.only(left: 107.0, right: 107.0),
+        padding: EdgeInsets.only(left: 100.0, right: 80.0),
         child: Text(
           'Dont have account?',
           style: TextStyle(color: Color(0xFF2985DA)),
