@@ -10,6 +10,7 @@ class PhysicsPage extends StatefulWidget {
   const PhysicsPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _PhysicsPageState createState() => _PhysicsPageState();
 }
 

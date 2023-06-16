@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class ChemistryFormulaPage extends StatefulWidget {
-  const ChemistryFormulaPage({Key? key});
+  const ChemistryFormulaPage({super.key});
 
   @override
   State<ChemistryFormulaPage> createState() => _ChemistryFormulaPageState();

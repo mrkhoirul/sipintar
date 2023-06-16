@@ -10,6 +10,7 @@ class BiologyPage extends StatefulWidget {
   const BiologyPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _BiologyPageState createState() => _BiologyPageState();
 }
 

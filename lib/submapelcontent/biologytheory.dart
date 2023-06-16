@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class BiologyTheoryPage extends StatefulWidget {
-  const BiologyTheoryPage({Key? key});
+  const BiologyTheoryPage({super.key});
 
   @override
   State<BiologyTheoryPage> createState() => _BiologyTheoryPageState();

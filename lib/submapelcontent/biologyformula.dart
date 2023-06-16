@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class BiologyFormulaPage extends StatefulWidget {
-  const BiologyFormulaPage({Key? key});
+  const BiologyFormulaPage({super.key});
 
   @override
   State<BiologyFormulaPage> createState() => _BiologyFormulaPageState();

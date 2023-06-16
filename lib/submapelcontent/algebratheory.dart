@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class AlgebraTheoryPage extends StatefulWidget {
-  const AlgebraTheoryPage({Key? key});
+  const AlgebraTheoryPage({super.key});
 
   @override
   State<AlgebraTheoryPage> createState() => _AlgebraTheoryPageState();

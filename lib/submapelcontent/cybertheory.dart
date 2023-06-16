@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class CyberTheoryPage extends StatefulWidget {
-  const CyberTheoryPage({Key? key});
+  const CyberTheoryPage({super.key});
 
   @override
   State<CyberTheoryPage> createState() => _CyberTheoryPageState();

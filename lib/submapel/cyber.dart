@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
-import '../submapelcontent/cyberCode.dart';
+// import '../submapelcontent/cyberCode.dart';
 import '../submapelcontent/cybertheory.dart';
 import '../submapelcontent/cybervideo.dart';
 
@@ -10,6 +10,7 @@ class CyberPage extends StatefulWidget {
   const CyberPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CyberPageState createState() => _CyberPageState();
 }
 

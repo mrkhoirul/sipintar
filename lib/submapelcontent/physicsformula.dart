@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class PhysicsFormulaPage extends StatefulWidget {
-  const PhysicsFormulaPage({Key? key});
+  const PhysicsFormulaPage({super.key});
 
   @override
   State<PhysicsFormulaPage> createState() => _PhysicsFormulaPageState();

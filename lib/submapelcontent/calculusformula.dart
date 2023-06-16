@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class CalculusFormulaPage extends StatefulWidget {
-  const CalculusFormulaPage({Key? key});
+  const CalculusFormulaPage({super.key});
 
   @override
   State<CalculusFormulaPage> createState() => _CalculusFormulaPageState();

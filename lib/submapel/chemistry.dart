@@ -10,6 +10,7 @@ class ChemistryPage extends StatefulWidget {
   const ChemistryPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ChemistryPageState createState() => _ChemistryPageState();
 }
 

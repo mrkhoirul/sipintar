@@ -4,7 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 
 class ProgrammingCodePage extends StatefulWidget {
-  const ProgrammingCodePage({Key? key});
+  const ProgrammingCodePage({super.key});
 
   @override
   State<ProgrammingCodePage> createState() => _ProgrammingCodePageState();

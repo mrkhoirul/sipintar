@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'users/login.dart';
-import 'mapel/it.dart';
 import 'mapel/science.dart';
 import 'mapel/math.dart';
 import 'users/profile.dart';
@@ -10,6 +9,7 @@ class MyCoursePage extends StatefulWidget {
   const MyCoursePage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyCoursePageState createState() => _MyCoursePageState();
 }
 

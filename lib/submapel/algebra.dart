@@ -10,6 +10,7 @@ class AlgebraPage extends StatefulWidget {
   const AlgebraPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _AlgebraPageState createState() => _AlgebraPageState();
 }
 
