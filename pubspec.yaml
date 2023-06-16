@@ -41,7 +41,6 @@ dependencies:
   firebase_core: ^2.13.1
   email_validator: ^2.1.17
   carousel_slider: ^4.2.1
-  video_player: ^2.6.1
   
 
 dev_dependencies:
@@ -81,29 +80,6 @@ flutter:
     - assets/images/it3.jpg
     - assets/images/it4.png
     - assets/images/sosial1.jpg
-    - assets/videos/aljabar.mp4
-    - assets/videos/calculus.mp4
-    - assets/videos/biology.mp4
-    - assets/videos/physics.mp4
-    - assets/videos/chemistry.mp4
-    - assets/videos/cyber.mp4
-    - assets/videos/programming.mp4
-    - assets/images/aljabar.jpg
-    - assets/images/biologi.jpg
-    - assets/images/cyber.jpg
-    - assets/images/fisika.jpg   
-    - assets/images/kalkulus.jpg
-    - assets/images/kimia.jpg
-    - assets/images/programming.jpg
-    - assets/images/aljabar1.png
-    - assets/images/biologi1.png
-    - assets/images/fisika1.png  
-    - assets/images/kalkulus1.jpg
-    - assets/images/kimia1.jpg
-    - assets/images/programming1.png
-    - assets/images/programming2.png
-
-
   fonts:
     - family: Montserrat
       fonts:
