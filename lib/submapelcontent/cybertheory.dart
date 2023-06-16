@@ -17,7 +17,11 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
   @override
   void initState() {
     super.initState();
-    if (global.username.length <= 9) {
+    if (global.username.length == 1) {
+      width = 100.0;
+    } else if (global.username.length <= 3) {
+      width = 120.0;
+    } else if (global.username.length <= 9) {
       width = 160.0;
     } else if (global.username.length <= 13) {
       width = 190.0;

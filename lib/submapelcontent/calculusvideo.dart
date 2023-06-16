@@ -29,7 +29,11 @@ class _CalculusVideoPageState extends State<CalculusVideoPage> {
         _sliderValue = _controller.value.position.inSeconds.toDouble();
       });
     });
-    if (global.username.length <= 9) {
+    if (global.username.length == 1) {
+      width = 100.0;
+    } else if (global.username.length <= 3) {
+      width = 120.0;
+    } else if (global.username.length <= 9) {
       width = 160.0;
     } else if (global.username.length <= 13) {
       width = 190.0;

@@ -17,7 +17,11 @@ class _AlgebraTheoryPageState extends State<AlgebraTheoryPage> {
   @override
   void initState() {
     super.initState();
-    if (global.username.length <= 9) {
+    if (global.username.length == 1) {
+      width = 100.0;
+    } else if (global.username.length <= 3) {
+      width = 120.0;
+    } else if (global.username.length <= 9) {
       width = 160.0;
     } else if (global.username.length <= 13) {
       width = 190.0;
@@ -54,25 +58,25 @@ class _AlgebraTheoryPageState extends State<AlgebraTheoryPage> {
                             Row(
                               children: [
                                 Container(
-                                alignment: Alignment.topLeft,
-                                child: GestureDetector(
-                                  onTap: () => Navigator.pop(context),
-                                  child: const Icon(
-                                    Icons.arrow_back,
-                                    color: Color.fromARGB(255, 140, 199, 254),
-                                    size: 30,
+                                  alignment: Alignment.topLeft,
+                                  child: GestureDetector(
+                                    onTap: () => Navigator.pop(context),
+                                    child: const Icon(
+                                      Icons.arrow_back,
+                                      color: Color.fromARGB(255, 140, 199, 254),
+                                      size: 30,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(width: 5),
-                              Container(
-                                alignment: Alignment.center,
-                                child: Image.asset(
-                                  'assets/images/SiPintar.png',
-                                  width: 50,
-                                  height: 50,
-                                ),
-                              )
+                                const SizedBox(width: 5),
+                                Container(
+                                  alignment: Alignment.center,
+                                  child: Image.asset(
+                                    'assets/images/SiPintar.png',
+                                    width: 50,
+                                    height: 50,
+                                  ),
+                                )
                               ],
                             ),
                             Padding(
