@@ -20,11 +20,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    super.initState();
     if (global.username.length == 1) {
-      width = 100.0;
-    } else if (global.username.length <= 3) {
-      width = 120.0;
-    } else if (global.username.length == 1) {
       width = 100.0;
     } else if (global.username.length <= 3) {
       width = 120.0;
