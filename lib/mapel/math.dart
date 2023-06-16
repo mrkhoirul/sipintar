@@ -28,6 +28,7 @@ class _MathPageState extends State<MathPage> {
       width = 230.0;
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -157,7 +158,7 @@ class _MathPageState extends State<MathPage> {
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
                                       child: Text(
-                                        global.username,
+                                        'Hai, ${global.username}!',
                                         style: const TextStyle(
                                           color: Color(0xFF22355C),
                                           fontWeight: FontWeight.bold,

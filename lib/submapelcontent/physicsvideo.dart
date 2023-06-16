@@ -184,7 +184,7 @@ class _PhysicsVideoPageState extends State<PhysicsVideoPage> {
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
                                       child: Text(
-                                        global.username,
+                                        'Hai, ${global.username}!',
                                         style: const TextStyle(
                                           color: Color(0xFF22355C),
                                           fontWeight: FontWeight.bold,
