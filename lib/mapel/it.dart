@@ -9,7 +9,7 @@ class ItPage extends StatefulWidget {
   const ItPage({super.key});
 
   @override
-  State<ItPage> createState() => _ItPageState();
+  _ItPageState createState() => _ItPageState();
 }
 
 class _ItPageState extends State<ItPage> {
@@ -33,149 +33,152 @@ class _ItPageState extends State<ItPage> {
                       height: 5,
                     ),
                     Padding(
-                        padding: const EdgeInsets.all(15),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  alignment: Alignment.topLeft,
-                                  height: 60,
-                                  width: 60,
-                                  decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                          "assets/images/SiPintar.png"),
-                                    ),
+                      padding: const EdgeInsets.all(15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                alignment: Alignment.topLeft,
+                                height: 60,
+                                width: 60,
+                                decoration: const BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/images/SiPintar.png"),
                                   ),
                                 ),
-                                const SizedBox(
-                                  width: 5,
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              const Text(
+                                "SiPintar",
+                                style: TextStyle(
+                                  color: Color(0xFF021E35),
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
                                 ),
-                                const Text(
-                                  "SiPintar",
-                                  style: TextStyle(
-                                      color: Color(0xFF021E35),
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold),
-                                )
-                              ],
-                            ),
-                            Padding(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Container(
-                                  width: 120.0,
-                                  alignment: Alignment.topRight,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(25),
-                                      color: const Color.fromARGB(
-                                          255, 140, 199, 254),
-                                      border: Border.all(
-                                          color: const Color.fromARGB(
-                                              255, 140, 199, 254),
-                                          width: 2)),
-                                  child: GestureDetector(
-                                      onTapDown: (detail) {
-                                        showMenu(
-                                            context: context,
-                                            position: const RelativeRect.fromLTRB(
-                                                75.0, 75.0, 0.0, 0.0),
-                                            shape: const RoundedRectangleBorder(
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(10.0))),
-                                            items: [
-                                              PopupMenuItem(
-                                                  value: 'profile',
-                                                  onTap: () => Get.to(const ProfilePage()),
-                                                  child: Row(
-                                                    children: const [
-                                                      Icon(
-                                                        Icons.person,
-                                                        color: Color(0xFF22355C),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  left: 10.0),
-                                                          child: Text(
-                                                            'Profile',
-                                                            style: TextStyle(
-                                                                color: Color(
-                                                                    0xFF22355C)),
-                                                          ))
-                                                    ],
-                                                  )),
-                                              PopupMenuItem(
-                                                  value: 'logout',
-                                                  onTap: () => Get.to(const LoginPage()),
-                                                  child: Row(
-                                                    children: const [
-                                                      Icon(
-                                                        Icons.logout,
-                                                        color: Color(0xFF22355C),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  left: 10.0),
-                                                          child: Text(
-                                                            'Logout',
-                                                            style: TextStyle(
-                                                                color: Color(
-                                                                    0xFF22355C)),
-                                                          ))
-                                                    ],
-                                                  ))
-                                            ]);
-                                      },
-                                      child: Row(
-                                        children: const [
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 10.0, right: 10.0),
+                              )
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5.0),
+                            child: Container(
+                              width: 120.0,
+                              alignment: Alignment.topRight,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                color: const Color.fromARGB(255, 140, 199, 254),
+                                border: Border.all(
+                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  width: 2,
+                                ),
+                              ),
+                              child: GestureDetector(
+                                onTapDown: (detail) {
+                                  showMenu(
+                                    context: context,
+                                    position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                    ),
+                                    items: [
+                                      PopupMenuItem(
+                                        value: 'profile',
+                                        onTap: () => Get.to(const ProfilePage()),
+                                        child: Row(
+                                          children: const [
+                                            Icon(
+                                              Icons.person,
+                                              color: Color(0xFF22355C),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(left: 10.0),
                                               child: Text(
-                                                'Hai, user!',
+                                                'Profile',
                                                 style: TextStyle(
-                                                    color: Color(0xFF22355C),
-                                                    fontWeight: FontWeight.bold),
-                                              )),
-                                          Icon(
-                                            Icons.person,
-                                            color: Color(0xFF22355C),
-                                            size: 30,
-                                          ),
-                                        ],
-                                      )),
-                                ))
-                          ],
-                        )),
-                    // const SizedBox(
-                    //   height: 15,
-                    // ),
+                                                  color: Color(0xFF22355C),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      PopupMenuItem(
+                                        value: 'logout',
+                                        onTap: () => Get.to(const LoginPage()),
+                                        child: Row(
+                                          children: const [
+                                            Icon(
+                                              Icons.logout,
+                                              color: Color(0xFF22355C),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(left: 10.0),
+                                              child: Text(
+                                                'Logout',
+                                                style: TextStyle(
+                                                  color: Color(0xFF22355C),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  );
+                                },
+                                child: Row(
+                                  children: const [
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: Text(
+                                        'Hai, user!',
+                                        style: TextStyle(
+                                          color: Color(0xFF22355C),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.person,
+                                      color: Color(0xFF22355C),
+                                      size: 30,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(10),
                       child: Container(
                         height: 60,
                         width: double.infinity,
                         decoration: BoxDecoration(
-                            color: const Color(0xFFF5F5F7),
-                            borderRadius: BorderRadius.circular(30)),
+                          color: const Color(0xFFF5F5F7),
+                          borderRadius: BorderRadius.circular(30),
+                        ),
                         child: TextField(
                           cursorHeight: 20,
                           autofocus: false,
                           decoration: InputDecoration(
-                              hintText: "Search",
-                              prefixIcon: const Icon(Icons.search),
-                              border: OutlineInputBorder(
-                                  borderSide:
-                                      const BorderSide(color: Colors.white),
-                                  borderRadius: BorderRadius.circular(30))),
+                            hintText: "Search",
+                            prefixIcon: const Icon(Icons.search),
+                            border: OutlineInputBorder(
+                              borderSide: const BorderSide(color: Colors.white),
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
             const Padding(
@@ -183,79 +186,79 @@ class _ItPageState extends State<ItPage> {
               child: Text(
                 "IT",
                 style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 2, 30, 53)),
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 30, 53),
+                ),
               ),
             ),
-            SizedBox(
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(
                       width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                GestureDetector(
-                                    onTap: () => Navigator.push(context,
-                                            MaterialPageRoute(
-                                          builder: (context) {
-                                            return const ProgrammingPage();
-                                          },
-                                        )),
-                                    child: const SizedBox(
-                                        width: double.infinity,
-                                        height: 40,
-                                        child: Text(
-                                          "Programming",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 30),
-                                        )))
-                              ],
+                      height: 250,
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        elevation: 10,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const CyberPage()),
+                            );
+                          },
+                          borderRadius: BorderRadius.circular(30),
+                          child: const Center(
+                            child: Text(
+                              "Cyber Security",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 30,
+                              ),
                             ),
-                          )
-                        ],
-                      )),
-            SizedBox(
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
                       width: 300,
-                      height: 50,
-                      child: Stack(
-                        children: [
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 10,
-                            child: Column(
-                              children: [
-                                GestureDetector(
-                                    onTap: () => Navigator.push(context,
-                                            MaterialPageRoute(
-                                          builder: (context) {
-                                            return const CyberPage();
-                                          },
-                                        )),
-                                    child: const SizedBox(
-                                        width: double.infinity,
-                                        height: 40,
-                                        child: Text(
-                                          "Cyber Security",
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(fontSize: 30),
-                                        )))
-                              ],
+                      height: 250,
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        elevation: 10,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (builder) => const ProgrammingPage()),
+                            );
+                          },
+                          borderRadius: BorderRadius.circular(30),
+                          child: const Center(
+                            child: Text(
+                              "Programming",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 30,
+                              ),
                             ),
-                          )
-                        ],
-                      )),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

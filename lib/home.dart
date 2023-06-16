@@ -1,12 +1,8 @@
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 import 'package:get/get.dart';
 import 'users/login.dart';
-import 'mapel/it.dart';
-import 'mapel/science.dart';
-import 'mapel/math.dart';
 import 'users/profile.dart';
 
 class HomePage extends StatefulWidget {
