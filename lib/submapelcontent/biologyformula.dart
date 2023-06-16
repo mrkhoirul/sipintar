@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import 'package:sipintar/global.dart' as global;
 
 class BiologyFormulaPage extends StatefulWidget {
   const BiologyFormulaPage({super.key});
@@ -44,7 +45,8 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                   width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/SiPintar.png"),
+                                      image: AssetImage(
+                                          "assets/images/SiPintar.png"),
                                     ),
                                   ),
                                 ),
@@ -68,9 +70,11 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                 alignment: Alignment.topRight,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25),
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   border: Border.all(
-                                    color: const Color.fromARGB(255, 140, 199, 254),
+                                    color: const Color.fromARGB(
+                                        255, 140, 199, 254),
                                     width: 2,
                                   ),
                                 ),
@@ -78,7 +82,8 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                   onTapDown: (detail) {
                                     showMenu(
                                       context: context,
-                                      position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                      position: const RelativeRect.fromLTRB(
+                                          75.0, 75.0, 0.0, 0.0),
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10.0),
@@ -87,7 +92,8 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                       items: [
                                         PopupMenuItem(
                                           value: 'profile',
-                                          onTap: () => Get.to(const ProfilePage()),
+                                          onTap: () =>
+                                              Get.to(const ProfilePage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -95,7 +101,8 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Profile',
                                                   style: TextStyle(
@@ -108,7 +115,8 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                         ),
                                         PopupMenuItem(
                                           value: 'logout',
-                                          onTap: () => Get.to(const LoginPage()),
+                                          onTap: () =>
+                                              Get.to(const LoginPage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -116,7 +124,8 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Logout',
                                                   style: TextStyle(
@@ -131,18 +140,19 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                                     );
                                   },
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                        padding: const EdgeInsets.only(
+                                            left: 10.0, right: 10.0),
                                         child: Text(
-                                          'Hai, user!',
-                                          style: TextStyle(
+                                          global.username,
+                                          style: const TextStyle(
                                             color: Color(0xFF22355C),
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.person,
                                         color: Color(0xFF22355C),
                                         size: 30,
@@ -171,7 +181,8 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                               hintText: "Search",
                               prefixIcon: const Icon(Icons.search),
                               border: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.white),
+                                borderSide:
+                                    const BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
@@ -208,102 +219,102 @@ class _BiologyFormulaPageState extends State<BiologyFormulaPage> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,15),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 15),
                         child: Text(
                           " Determinasi seks, seperti halnya pada penentuan ciri khas lain dari makhluk hidup yang diturunkan dari induk kepada keturunannya. Penentuan jenis kelamin suatu individu bergantung pada kromosom seks (gonosom). Penentuan ini terjadi sejak pembentukan gamet dan proses fertilisasi. Berdasarkan tipe kromosom dan makhluk hidup yang memilikinya, determinasi seks dapat dibedakan atas tipe XY, Z, XO, dan ZO.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,0),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                         child: Text(
                           "1. Tipe XY",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.left,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.left,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,15),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 15),
                         child: Text(
                           " Determinasi seks berdasarkan tipe XY dimiliki oleh manusia, sebagian hewan seperti Drosophila melanogaster, serta sebagian tumbuhan. Pada individu betina (perempuan) memiliki kromosom seks XX, sedangkan pada individu jantan (laki-laki) memiliki tipe kromosom XY.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,0),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                         child: Text(
                           "2. Tipe ZO",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.left,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.left,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,15),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 15),
                         child: Text(
                           " Determinasi seks dengan tipe Z dimiliki oleh beberapa unggas, kupu-kupu, reptil, dan beberapa ikan. Pada individu betina ZO, dan individu jantan ZZ.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,0),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                         child: Text(
                           "3. Tipe XO",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.left,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.left,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,15),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 15),
                         child: Text(
                           " Determinasi seks tipe XO berlaku pada beberapa jenis serangga seperti belalang, anggota Orthoptera dan Heteroptera. Pada individu jantan XO dan individu betina XX",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,0),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
                         child: Text(
                           "4. Tipe Ploidi",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.left,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.left,
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.fromLTRB(15,0,15,15),
+                        padding: EdgeInsets.fromLTRB(15, 0, 15, 15),
                         child: Text(
                           " Determinasi seks tipe ini tidak ditentukan oleh kromosom kelamin, namun ditentukan jumlah ploidi kromosomnya. Hal tersebut berlaku pada lebah. Individu betina memiliki kromosom diploid (2n), sedangkan individu jantan haploid (n).",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                     ],

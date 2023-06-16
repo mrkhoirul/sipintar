@@ -4,9 +4,7 @@ import 'course.dart';
 import 'mycourse.dart';
 
 class BottomNavigationBarPage extends StatefulWidget {
-  // final String email;
-  final String username;
-  const BottomNavigationBarPage({super.key, required this.username});
+  const BottomNavigationBarPage({super.key});
 
   @override
   State<BottomNavigationBarPage> createState() =>
@@ -72,7 +70,7 @@ class BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
         });
       default:
         return MaterialPageRoute(builder: (context) {
-          return HomePage(username: widget.username);
+          return const HomePage();
         });
     }
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import 'package:sipintar/global.dart' as global;
 
 class ChemistryTheoryPage extends StatefulWidget {
   const ChemistryTheoryPage({super.key});
@@ -44,7 +45,8 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                   width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/SiPintar.png"),
+                                      image: AssetImage(
+                                          "assets/images/SiPintar.png"),
                                     ),
                                   ),
                                 ),
@@ -68,9 +70,11 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                 alignment: Alignment.topRight,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25),
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   border: Border.all(
-                                    color: const Color.fromARGB(255, 140, 199, 254),
+                                    color: const Color.fromARGB(
+                                        255, 140, 199, 254),
                                     width: 2,
                                   ),
                                 ),
@@ -78,7 +82,8 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                   onTapDown: (detail) {
                                     showMenu(
                                       context: context,
-                                      position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                      position: const RelativeRect.fromLTRB(
+                                          75.0, 75.0, 0.0, 0.0),
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10.0),
@@ -87,7 +92,8 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                       items: [
                                         PopupMenuItem(
                                           value: 'profile',
-                                          onTap: () => Get.to(const ProfilePage()),
+                                          onTap: () =>
+                                              Get.to(const ProfilePage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -95,7 +101,8 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Profile',
                                                   style: TextStyle(
@@ -108,7 +115,8 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                         ),
                                         PopupMenuItem(
                                           value: 'logout',
-                                          onTap: () => Get.to(const LoginPage()),
+                                          onTap: () =>
+                                              Get.to(const LoginPage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -116,7 +124,8 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Logout',
                                                   style: TextStyle(
@@ -131,18 +140,19 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                                     );
                                   },
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                        padding: const EdgeInsets.only(
+                                            left: 10.0, right: 10.0),
                                         child: Text(
-                                          'Hai, user!',
-                                          style: TextStyle(
+                                          global.username,
+                                          style: const TextStyle(
                                             color: Color(0xFF22355C),
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.person,
                                         color: Color(0xFF22355C),
                                         size: 30,
@@ -171,7 +181,8 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                               hintText: "Search",
                               prefixIcon: const Icon(Icons.search),
                               border: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.white),
+                                borderSide:
+                                    const BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
@@ -212,10 +223,10 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                         child: Text(
                           " Kimia adalah cabang ilmu pengetahuan alam yang mempelajari struktur, komposisi, sifat, reaktivitas, dan transformasi materi. Kimia mempelajari bagaimana atom dan molekul berinteraksi satu sama lain, baik dalam reaksi kimia maupun dalam membentuk berbagai jenis zat dan senyawa. Melalui pemahaman kimia, kita dapat menjelaskan fenomena seperti perubahan fase materi, reaksi kimia, kinetika reaksi, termokimia, dan banyak lagi.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
@@ -223,10 +234,10 @@ class _ChemistryTheoryPageState extends State<ChemistryTheoryPage> {
                         child: Text(
                           " Kimia memiliki peran yang sangat penting dalam kehidupan sehari-hari. Dalam bidang kesehatan, kimia membantu dalam penemuan obat-obatan dan pengembangan metode analisis untuk diagnosis penyakit. Dalam industri, kimia digunakan dalam produksi berbagai bahan dan produk, seperti bahan kimia industri, polimer, obat-obatan, dan kosmetik. Kimia juga berkontribusi dalam pemahaman tentang lingkungan, seperti dalam analisis kualitas air dan udara serta dalam pengembangan teknologi yang ramah lingkungan. Selain itu, kimia berperan penting dalam bidang pertanian, makanan, energi, dan material. Dengan mempelajari kimia, kita dapat memahami dan mengendalikan transformasi materi, yang membuka pintu bagi inovasi dan pemecahan masalah dalam berbagai aspek kehidupan manusia.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                     ],

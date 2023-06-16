@@ -3,10 +3,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
 import 'users/login.dart';
 import 'users/profile.dart';
+import 'global.dart' as global;
 
 class HomePage extends StatefulWidget {
-  final String username;
-  const HomePage({super.key, required this.username});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -21,11 +21,11 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    if (widget.username.length <= 9) {
+    if (global.username.length <= 9) {
       width = 160.0;
-    } else if (widget.username.length <= 13) {
+    } else if (global.username.length <= 13) {
       width = 190.0;
-    } else if (widget.username.length <= 20) {
+    } else if (global.username.length <= 20) {
       width = 230.0;
     }
   }
@@ -151,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                                             padding: const EdgeInsets.only(
                                                 left: 10.0, right: 10.0),
                                             child: Text(
-                                              'Hai, ${widget.username}!',
+                                              'Hai, ${global.username}!',
                                               style: const TextStyle(
                                                   color: Color(0xFF22355C),
                                                   fontWeight: FontWeight.bold),

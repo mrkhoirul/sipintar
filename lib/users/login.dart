@@ -4,11 +4,10 @@ import '../localnotification.dart';
 import '../bottomnavigationbar.dart';
 import 'forgotpassword.dart';
 import 'register.dart';
+import '../global.dart' as global;
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key, this.id});
-
-  final String? id;
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() {
@@ -127,30 +126,27 @@ class _LoginPageState extends State<LoginPage> {
           onPressed: () async {
             var usernameFire = await checkUsername(usernameController.text);
             var passwordFire = await checkPassword(passwordController.text);
-            if(usernameController.text == '') {
+            if (usernameController.text == '') {
               LocalNotificationService().showNotif(
-                  title: 'Login Gagal',
-                  body: 'Username masih kosong.');
-            } else if(passwordController.text == '') {
+                  title: 'Login Gagal', body: 'Username masih kosong.');
+            } else if (passwordController.text == '') {
               LocalNotificationService().showNotif(
-                  title: 'Login Gagal',
-                  body: 'Password masih kosong.');
+                  title: 'Login Gagal', body: 'Password masih kosong.');
             } else {
-              if(usernameController.text != usernameFire) {
+              if (usernameController.text != usernameFire) {
                 LocalNotificationService().showNotif(
-                  title: 'Login Gagal',
-                  body: 'Username tidak terdaftar.');
-              } else if(passwordController.text != passwordFire) {
-                LocalNotificationService().showNotif(
-                  title: 'Login Gagal',
-                  body: 'Password salah.');
+                    title: 'Login Gagal', body: 'Username tidak terdaftar.');
+              } else if (passwordController.text != passwordFire) {
+                LocalNotificationService()
+                    .showNotif(title: 'Login Gagal', body: 'Password salah.');
               } else {
                 LocalNotificationService().showNotif(
-                  title: 'Login Berhasil',
-                  body: 'Login telah berhasil dilakukan!');
+                    title: 'Login Berhasil',
+                    body: 'Login telah berhasil dilakukan!');
+                global.username = usernameFire;
                 // ignore: use_build_context_synchronously
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return BottomNavigationBarPage(username: usernameFire);
+                  return const BottomNavigationBarPage();
                 }));
               }
             }

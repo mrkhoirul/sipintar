@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import 'package:sipintar/global.dart' as global;
 
 class PhysicsTheoryPage extends StatefulWidget {
   const PhysicsTheoryPage({super.key});
@@ -44,7 +45,8 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                   width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/SiPintar.png"),
+                                      image: AssetImage(
+                                          "assets/images/SiPintar.png"),
                                     ),
                                   ),
                                 ),
@@ -68,9 +70,11 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                 alignment: Alignment.topRight,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25),
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   border: Border.all(
-                                    color: const Color.fromARGB(255, 140, 199, 254),
+                                    color: const Color.fromARGB(
+                                        255, 140, 199, 254),
                                     width: 2,
                                   ),
                                 ),
@@ -78,7 +82,8 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                   onTapDown: (detail) {
                                     showMenu(
                                       context: context,
-                                      position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                      position: const RelativeRect.fromLTRB(
+                                          75.0, 75.0, 0.0, 0.0),
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10.0),
@@ -87,7 +92,8 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                       items: [
                                         PopupMenuItem(
                                           value: 'profile',
-                                          onTap: () => Get.to(const ProfilePage()),
+                                          onTap: () =>
+                                              Get.to(const ProfilePage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -95,7 +101,8 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Profile',
                                                   style: TextStyle(
@@ -108,7 +115,8 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                         ),
                                         PopupMenuItem(
                                           value: 'logout',
-                                          onTap: () => Get.to(const LoginPage()),
+                                          onTap: () =>
+                                              Get.to(const LoginPage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -116,7 +124,8 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Logout',
                                                   style: TextStyle(
@@ -131,18 +140,19 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                                     );
                                   },
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                        padding: const EdgeInsets.only(
+                                            left: 10.0, right: 10.0),
                                         child: Text(
-                                          'Hai, user!',
-                                          style: TextStyle(
+                                          global.username,
+                                          style: const TextStyle(
                                             color: Color(0xFF22355C),
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.person,
                                         color: Color(0xFF22355C),
                                         size: 30,
@@ -171,7 +181,8 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                               hintText: "Search",
                               prefixIcon: const Icon(Icons.search),
                               border: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.white),
+                                borderSide:
+                                    const BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
@@ -212,10 +223,10 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                         child: Text(
                           " Fisika adalah salah satu cabang ilmu pengetahuan alam yang mempelajari sifat, struktur, dan interaksi dari materi dan energi. Dalam fisika, kita mencoba memahami fenomena alamiah melalui pemodelan matematika, pengamatan, dan eksperimen. Fisika berusaha menjelaskan berbagai peristiwa mulai dari skala subatomik hingga skala kosmik. Ilmu ini mencakup berbagai bidang seperti mekanika, termodinamika, elektromagnetisme, optik, fisika partikel, dan kosmologi.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
@@ -223,10 +234,10 @@ class _PhysicsTheoryPageState extends State<PhysicsTheoryPage> {
                         child: Text(
                           " Fisika memiliki peran penting dalam memahami dunia di sekitar kita. Melalui fisika, kita dapat memahami bagaimana benda bergerak, bagaimana gaya bekerja, bagaimana panas berpindah, dan banyak lagi. Selain itu, fisika juga memberikan dasar bagi pengembangan teknologi baru. Banyak penemuan dan inovasi dalam bidang fisika telah mengubah dunia, seperti penemuan listrik dan pengembangan komputer. Fisika juga merupakan landasan bagi ilmu-ilmu lain seperti kimia, biologi, dan teknik. Dengan mempelajari fisika, kita dapat memahami prinsip-prinsip dasar yang mengatur alam semesta dan meningkatkan pemahaman kita tentang dunia di sekitar kita.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                     ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import 'package:sipintar/global.dart' as global;
 
 class ProgrammingTheoryPage extends StatefulWidget {
   const ProgrammingTheoryPage({super.key});
@@ -44,7 +45,8 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                   width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/SiPintar.png"),
+                                      image: AssetImage(
+                                          "assets/images/SiPintar.png"),
                                     ),
                                   ),
                                 ),
@@ -68,9 +70,11 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                 alignment: Alignment.topRight,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25),
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   border: Border.all(
-                                    color: const Color.fromARGB(255, 140, 199, 254),
+                                    color: const Color.fromARGB(
+                                        255, 140, 199, 254),
                                     width: 2,
                                   ),
                                 ),
@@ -78,7 +82,8 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                   onTapDown: (detail) {
                                     showMenu(
                                       context: context,
-                                      position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                      position: const RelativeRect.fromLTRB(
+                                          75.0, 75.0, 0.0, 0.0),
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10.0),
@@ -87,7 +92,8 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                       items: [
                                         PopupMenuItem(
                                           value: 'profile',
-                                          onTap: () => Get.to(const ProfilePage()),
+                                          onTap: () =>
+                                              Get.to(const ProfilePage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -95,7 +101,8 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Profile',
                                                   style: TextStyle(
@@ -108,7 +115,8 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                         ),
                                         PopupMenuItem(
                                           value: 'logout',
-                                          onTap: () => Get.to(const LoginPage()),
+                                          onTap: () =>
+                                              Get.to(const LoginPage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -116,7 +124,8 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Logout',
                                                   style: TextStyle(
@@ -131,18 +140,19 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                                     );
                                   },
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                        padding: const EdgeInsets.only(
+                                            left: 10.0, right: 10.0),
                                         child: Text(
-                                          'Hai, user!',
-                                          style: TextStyle(
+                                          global.username,
+                                          style: const TextStyle(
                                             color: Color(0xFF22355C),
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.person,
                                         color: Color(0xFF22355C),
                                         size: 30,
@@ -171,7 +181,8 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                               hintText: "Search",
                               prefixIcon: const Icon(Icons.search),
                               border: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.white),
+                                borderSide:
+                                    const BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
@@ -212,10 +223,10 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                         child: Text(
                           " Programming adalah proses menulis, menguji, dan memelihara kode komputer untuk membuat program komputer yang dapat melakukan berbagai tugas dan mengendalikan perilaku komputer. Dalam dunia komputasi, programming menjadi fondasi utama dalam pengembangan aplikasi, perangkat lunak, dan sistem komputer. Dengan menggunakan bahasa pemrograman yang sesuai, seorang programmer dapat menginstruksikan komputer untuk menjalankan serangkaian perintah dan algoritma yang dirancang untuk mencapai tujuan tertentu.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
@@ -223,10 +234,10 @@ class _ProgrammingTheoryPageState extends State<ProgrammingTheoryPage> {
                         child: Text(
                           " Programming memainkan peran penting dalam teknologi modern dan mempengaruhi hampir setiap aspek kehidupan kita. Dalam industri, programming digunakan untuk mengembangkan perangkat lunak, aplikasi web, aplikasi seluler, dan sistem yang mengotomatisasi proses bisnis. Di bidang ilmiah dan penelitian, programming memungkinkan analisis data, pemodelan matematika, dan simulasi yang kompleks. Selain itu, programming juga berkontribusi dalam pengembangan kecerdasan buatan, robotika, keamanan siber, dan teknologi lainnya. Kemampuan untuk memprogram memberikan kekuatan kepada individu untuk menciptakan solusi inovatif, mendigitalkan proses, dan memecahkan masalah dengan cara yang efisien dan efektif.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                     ],

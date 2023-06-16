@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
 import 'package:video_player/video_player.dart';
+import 'package:sipintar/global.dart' as global;
 
 class ChemistryVideoPage extends StatefulWidget {
   const ChemistryVideoPage({Key? key}) : super(key: key);
@@ -170,19 +171,19 @@ class _ChemistryVideoPageState extends State<ChemistryVideoPage> {
                                   );
                                 },
                                 child: Row(
-                                  children: const [
+                                  children: [
                                     Padding(
-                                      padding: EdgeInsets.only(
+                                      padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
                                       child: Text(
-                                        'Hai, user!',
-                                        style: TextStyle(
+                                        global.username,
+                                        style: const TextStyle(
                                           color: Color(0xFF22355C),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.person,
                                       color: Color(0xFF22355C),
                                       size: 30,

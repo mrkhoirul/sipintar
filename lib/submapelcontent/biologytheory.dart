@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import 'package:sipintar/global.dart' as global;
 
 class BiologyTheoryPage extends StatefulWidget {
   const BiologyTheoryPage({super.key});
@@ -44,7 +45,8 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                   width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/SiPintar.png"),
+                                      image: AssetImage(
+                                          "assets/images/SiPintar.png"),
                                     ),
                                   ),
                                 ),
@@ -68,9 +70,11 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                 alignment: Alignment.topRight,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25),
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   border: Border.all(
-                                    color: const Color.fromARGB(255, 140, 199, 254),
+                                    color: const Color.fromARGB(
+                                        255, 140, 199, 254),
                                     width: 2,
                                   ),
                                 ),
@@ -78,7 +82,8 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                   onTapDown: (detail) {
                                     showMenu(
                                       context: context,
-                                      position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                      position: const RelativeRect.fromLTRB(
+                                          75.0, 75.0, 0.0, 0.0),
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10.0),
@@ -87,7 +92,8 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                       items: [
                                         PopupMenuItem(
                                           value: 'profile',
-                                          onTap: () => Get.to(const ProfilePage()),
+                                          onTap: () =>
+                                              Get.to(const ProfilePage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -95,7 +101,8 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Profile',
                                                   style: TextStyle(
@@ -108,7 +115,8 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                         ),
                                         PopupMenuItem(
                                           value: 'logout',
-                                          onTap: () => Get.to(const LoginPage()),
+                                          onTap: () =>
+                                              Get.to(const LoginPage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -116,7 +124,8 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Logout',
                                                   style: TextStyle(
@@ -131,18 +140,19 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                                     );
                                   },
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                        padding: const EdgeInsets.only(
+                                            left: 10.0, right: 10.0),
                                         child: Text(
-                                          'Hai, user!',
-                                          style: TextStyle(
+                                          global.username,
+                                          style: const TextStyle(
                                             color: Color(0xFF22355C),
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.person,
                                         color: Color(0xFF22355C),
                                         size: 30,
@@ -171,7 +181,8 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                               hintText: "Search",
                               prefixIcon: const Icon(Icons.search),
                               border: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.white),
+                                borderSide:
+                                    const BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
@@ -212,10 +223,10 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                         child: Text(
                           " Biologi atau ilmu hayat adalah kajian tentang kehidupan, dan organisme hidup, termasuk struktur, fungsi, pertumbuhan, evolusi, persebaran, dan taksonominya. Ilmu biologi modern sangat luas, dan eklektik, serta terdiri dari berbagai macam cabang, dan subdisiplin. Namun, meskipun lingkupnya luas, terdapat beberapa konsep umum yang mengatur semua penelitian, sehingga menyatukannya dalam satu bidang.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
@@ -223,10 +234,10 @@ class _BiologyTheoryPageState extends State<BiologyTheoryPage> {
                         child: Text(
                           " Biologi umumnya mengakui sel sebagai satuan dasar kehidupan, gen sebagai satuan dasar pewarisan, dan evolusi sebagai mekanisme yang mendorong terciptanya spesies baru. Selain itu, organisme diyakini bertahan dengan mengonsumsi, dan mengubah energi serta dengan meregulasi keadaan dalamnya agar tetap stabil, dan vital.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                     ],

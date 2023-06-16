@@ -4,6 +4,7 @@ import '../users/login.dart';
 import '../users/profile.dart';
 import '../submapel/programming.dart';
 import '../submapel/cyber.dart';
+import 'package:sipintar/global.dart' as global;
 
 class ItPage extends StatefulWidget {
   const ItPage({super.key});
@@ -46,7 +47,8 @@ class _ItPageState extends State<ItPage> {
                                 width: 60,
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage("assets/images/SiPintar.png"),
+                                    image: AssetImage(
+                                        "assets/images/SiPintar.png"),
                                   ),
                                 ),
                               ),
@@ -72,7 +74,8 @@ class _ItPageState extends State<ItPage> {
                                 borderRadius: BorderRadius.circular(25),
                                 color: const Color.fromARGB(255, 140, 199, 254),
                                 border: Border.all(
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   width: 2,
                                 ),
                               ),
@@ -80,14 +83,17 @@ class _ItPageState extends State<ItPage> {
                                 onTapDown: (detail) {
                                   showMenu(
                                     context: context,
-                                    position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                    position: const RelativeRect.fromLTRB(
+                                        75.0, 75.0, 0.0, 0.0),
                                     shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
                                     ),
                                     items: [
                                       PopupMenuItem(
                                         value: 'profile',
-                                        onTap: () => Get.to(const ProfilePage()),
+                                        onTap: () =>
+                                            Get.to(const ProfilePage()),
                                         child: Row(
                                           children: const [
                                             Icon(
@@ -95,7 +101,8 @@ class _ItPageState extends State<ItPage> {
                                               color: Color(0xFF22355C),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(left: 10.0),
+                                              padding:
+                                                  EdgeInsets.only(left: 10.0),
                                               child: Text(
                                                 'Profile',
                                                 style: TextStyle(
@@ -116,7 +123,8 @@ class _ItPageState extends State<ItPage> {
                                               color: Color(0xFF22355C),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(left: 10.0),
+                                              padding:
+                                                  EdgeInsets.only(left: 10.0),
                                               child: Text(
                                                 'Logout',
                                                 style: TextStyle(
@@ -131,18 +139,19 @@ class _ItPageState extends State<ItPage> {
                                   );
                                 },
                                 child: Row(
-                                  children: const [
+                                  children: [
                                     Padding(
-                                      padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
                                       child: Text(
-                                        'Hai, user!',
-                                        style: TextStyle(
+                                        global.username,
+                                        style: const TextStyle(
                                           color: Color(0xFF22355C),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.person,
                                       color: Color(0xFF22355C),
                                       size: 30,
@@ -209,7 +218,8 @@ class _ItPageState extends State<ItPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const CyberPage()),
+                              MaterialPageRoute(
+                                  builder: (context) => const CyberPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),
@@ -237,7 +247,9 @@ class _ItPageState extends State<ItPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (builder) => const ProgrammingPage()),
+                              MaterialPageRoute(
+                                  builder: (builder) =>
+                                      const ProgrammingPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../users/login.dart';
 import '../users/profile.dart';
+import 'package:sipintar/global.dart' as global;
 
 class CyberTheoryPage extends StatefulWidget {
   const CyberTheoryPage({super.key});
@@ -44,7 +45,8 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                   width: 45,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/SiPintar.png"),
+                                      image: AssetImage(
+                                          "assets/images/SiPintar.png"),
                                     ),
                                   ),
                                 ),
@@ -68,9 +70,11 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                 alignment: Alignment.topRight,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(25),
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   border: Border.all(
-                                    color: const Color.fromARGB(255, 140, 199, 254),
+                                    color: const Color.fromARGB(
+                                        255, 140, 199, 254),
                                     width: 2,
                                   ),
                                 ),
@@ -78,7 +82,8 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                   onTapDown: (detail) {
                                     showMenu(
                                       context: context,
-                                      position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                      position: const RelativeRect.fromLTRB(
+                                          75.0, 75.0, 0.0, 0.0),
                                       shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(10.0),
@@ -87,7 +92,8 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                       items: [
                                         PopupMenuItem(
                                           value: 'profile',
-                                          onTap: () => Get.to(const ProfilePage()),
+                                          onTap: () =>
+                                              Get.to(const ProfilePage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -95,7 +101,8 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Profile',
                                                   style: TextStyle(
@@ -108,7 +115,8 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                         ),
                                         PopupMenuItem(
                                           value: 'logout',
-                                          onTap: () => Get.to(const LoginPage()),
+                                          onTap: () =>
+                                              Get.to(const LoginPage()),
                                           child: Row(
                                             children: const [
                                               Icon(
@@ -116,7 +124,8 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                                 color: Color(0xFF22355C),
                                               ),
                                               Padding(
-                                                padding: EdgeInsets.only(left: 10.0),
+                                                padding:
+                                                    EdgeInsets.only(left: 10.0),
                                                 child: Text(
                                                   'Logout',
                                                   style: TextStyle(
@@ -131,18 +140,19 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                                     );
                                   },
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Padding(
-                                        padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                        padding: const EdgeInsets.only(
+                                            left: 10.0, right: 10.0),
                                         child: Text(
-                                          'Hai, user!',
-                                          style: TextStyle(
+                                          global.username,
+                                          style: const TextStyle(
                                             color: Color(0xFF22355C),
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ),
-                                      Icon(
+                                      const Icon(
                                         Icons.person,
                                         color: Color(0xFF22355C),
                                         size: 30,
@@ -171,7 +181,8 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                               hintText: "Search",
                               prefixIcon: const Icon(Icons.search),
                               border: OutlineInputBorder(
-                                borderSide: const BorderSide(color: Colors.white),
+                                borderSide:
+                                    const BorderSide(color: Colors.white),
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
@@ -212,10 +223,10 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                         child: Text(
                           " Cybersecurity adalah bidang yang berkaitan dengan perlindungan dan keamanan sistem komputer, jaringan, perangkat elektronik, dan data dari ancaman dan serangan yang berasal dari dunia digital. Tujuan utama dari cybersecurity adalah untuk mencegah akses yang tidak sah, penggunaan yang tidak sah, dan perubahan yang tidak diinginkan terhadap sistem dan data yang sensitif.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
@@ -223,10 +234,10 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                         child: Text(
                           " Dalam era digital saat ini, ancaman keamanan cyber semakin kompleks dan beragam. Cybersecurity melibatkan serangkaian praktik, kebijakan, dan teknologi yang dirancang untuk melindungi sistem dan data dari ancaman seperti serangan malware, peretasan (hacking), pencurian data, serangan DDoS (Distributed Denial of Service), dan lain sebagainya. Upaya dalam cybersecurity meliputi identifikasi kerentanan, penerapan langkah-langkah pengamanan, pemantauan sistem secara aktif, deteksi serangan, dan respons cepat terhadap insiden keamanan.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                       const Padding(
@@ -234,10 +245,10 @@ class _CyberTheoryPageState extends State<CyberTheoryPage> {
                         child: Text(
                           " Keamanan cyber sangat penting karena kebanyakan organisasi dan individu bergantung pada teknologi informasi dan sistem komputer untuk menjalankan operasi sehari-hari. Pelanggaran keamanan cyber dapat memiliki dampak serius, termasuk pencurian data sensitif, kerugian finansial, kerusakan reputasi, dan gangguan pada operasional bisnis. Oleh karena itu, cybersecurity menjadi aspek yang sangat penting dalam dunia digital untuk melindungi dan menjaga keamanan sistem, data, dan informasi yang berharga.",
                           style: TextStyle(
-                          fontSize: 16,
-                          color: Color.fromARGB(255, 2, 30, 53),
-                        ),
-                        textAlign: TextAlign.justify,
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 2, 30, 53),
+                          ),
+                          textAlign: TextAlign.justify,
                         ),
                       ),
                     ],

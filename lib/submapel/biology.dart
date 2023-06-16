@@ -5,6 +5,7 @@ import '../users/profile.dart';
 import '../submapelcontent/biologyformula.dart';
 import '../submapelcontent/biologytheory.dart';
 import '../submapelcontent/biologyvideo.dart';
+import 'package:sipintar/global.dart' as global;
 
 class BiologyPage extends StatefulWidget {
   const BiologyPage({super.key});
@@ -47,7 +48,8 @@ class _BiologyPageState extends State<BiologyPage> {
                                 width: 60,
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage("assets/images/SiPintar.png"),
+                                    image: AssetImage(
+                                        "assets/images/SiPintar.png"),
                                   ),
                                 ),
                               ),
@@ -73,7 +75,8 @@ class _BiologyPageState extends State<BiologyPage> {
                                 borderRadius: BorderRadius.circular(25),
                                 color: const Color.fromARGB(255, 140, 199, 254),
                                 border: Border.all(
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   width: 2,
                                 ),
                               ),
@@ -81,14 +84,17 @@ class _BiologyPageState extends State<BiologyPage> {
                                 onTapDown: (detail) {
                                   showMenu(
                                     context: context,
-                                    position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                    position: const RelativeRect.fromLTRB(
+                                        75.0, 75.0, 0.0, 0.0),
                                     shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
                                     ),
                                     items: [
                                       PopupMenuItem(
                                         value: 'profile',
-                                        onTap: () => Get.to(const ProfilePage()),
+                                        onTap: () =>
+                                            Get.to(const ProfilePage()),
                                         child: Row(
                                           children: const [
                                             Icon(
@@ -96,7 +102,8 @@ class _BiologyPageState extends State<BiologyPage> {
                                               color: Color(0xFF22355C),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(left: 10.0),
+                                              padding:
+                                                  EdgeInsets.only(left: 10.0),
                                               child: Text(
                                                 'Profile',
                                                 style: TextStyle(
@@ -117,7 +124,8 @@ class _BiologyPageState extends State<BiologyPage> {
                                               color: Color(0xFF22355C),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(left: 10.0),
+                                              padding:
+                                                  EdgeInsets.only(left: 10.0),
                                               child: Text(
                                                 'Logout',
                                                 style: TextStyle(
@@ -132,18 +140,20 @@ class _BiologyPageState extends State<BiologyPage> {
                                   );
                                 },
                                 child: Row(
-                                  children: const [
+                                  children: [
                                     Padding(
-                                      padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                      // ignore: prefer_const_constructors
+                                      padding: EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
                                       child: Text(
-                                        'Hai, user!',
-                                        style: TextStyle(
+                                        global.username,
+                                        style: const TextStyle(
                                           color: Color(0xFF22355C),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.person,
                                       color: Color(0xFF22355C),
                                       size: 30,
@@ -210,7 +220,9 @@ class _BiologyPageState extends State<BiologyPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (builder) => const BiologyTheoryPage()),
+                              MaterialPageRoute(
+                                  builder: (builder) =>
+                                      const BiologyTheoryPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),
@@ -238,7 +250,9 @@ class _BiologyPageState extends State<BiologyPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const BiologyFormulaPage()),
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const BiologyFormulaPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),
@@ -266,7 +280,9 @@ class _BiologyPageState extends State<BiologyPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (builder) => const BiologyVideoPage()),
+                              MaterialPageRoute(
+                                  builder: (builder) =>
+                                      const BiologyVideoPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),

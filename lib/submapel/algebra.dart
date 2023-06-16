@@ -5,6 +5,7 @@ import '../users/profile.dart';
 import '../submapelcontent/algebratheory.dart';
 import '../submapelcontent/algebraformula.dart';
 import '../submapelcontent/algebravideo.dart';
+import 'package:sipintar/global.dart' as global;
 
 class AlgebraPage extends StatefulWidget {
   const AlgebraPage({super.key});
@@ -47,7 +48,8 @@ class _AlgebraPageState extends State<AlgebraPage> {
                                 width: 60,
                                 decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage("assets/images/SiPintar.png"),
+                                    image: AssetImage(
+                                        "assets/images/SiPintar.png"),
                                   ),
                                 ),
                               ),
@@ -73,7 +75,8 @@ class _AlgebraPageState extends State<AlgebraPage> {
                                 borderRadius: BorderRadius.circular(25),
                                 color: const Color.fromARGB(255, 140, 199, 254),
                                 border: Border.all(
-                                  color: const Color.fromARGB(255, 140, 199, 254),
+                                  color:
+                                      const Color.fromARGB(255, 140, 199, 254),
                                   width: 2,
                                 ),
                               ),
@@ -81,14 +84,17 @@ class _AlgebraPageState extends State<AlgebraPage> {
                                 onTapDown: (detail) {
                                   showMenu(
                                     context: context,
-                                    position: const RelativeRect.fromLTRB(75.0, 75.0, 0.0, 0.0),
+                                    position: const RelativeRect.fromLTRB(
+                                        75.0, 75.0, 0.0, 0.0),
                                     shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
                                     ),
                                     items: [
                                       PopupMenuItem(
                                         value: 'profile',
-                                        onTap: () => Get.to(const ProfilePage()),
+                                        onTap: () =>
+                                            Get.to(const ProfilePage()),
                                         child: Row(
                                           children: const [
                                             Icon(
@@ -96,7 +102,8 @@ class _AlgebraPageState extends State<AlgebraPage> {
                                               color: Color(0xFF22355C),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(left: 10.0),
+                                              padding:
+                                                  EdgeInsets.only(left: 10.0),
                                               child: Text(
                                                 'Profile',
                                                 style: TextStyle(
@@ -117,7 +124,8 @@ class _AlgebraPageState extends State<AlgebraPage> {
                                               color: Color(0xFF22355C),
                                             ),
                                             Padding(
-                                              padding: EdgeInsets.only(left: 10.0),
+                                              padding:
+                                                  EdgeInsets.only(left: 10.0),
                                               child: Text(
                                                 'Logout',
                                                 style: TextStyle(
@@ -132,18 +140,19 @@ class _AlgebraPageState extends State<AlgebraPage> {
                                   );
                                 },
                                 child: Row(
-                                  children: const [
+                                  children: [
                                     Padding(
-                                      padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
                                       child: Text(
-                                        'Hai, user!',
-                                        style: TextStyle(
+                                        global.username,
+                                        style: const TextStyle(
                                           color: Color(0xFF22355C),
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.person,
                                       color: Color(0xFF22355C),
                                       size: 30,
@@ -210,7 +219,9 @@ class _AlgebraPageState extends State<AlgebraPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (builder) => const AlgebraTheoryPage()),
+                              MaterialPageRoute(
+                                  builder: (builder) =>
+                                      const AlgebraTheoryPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),
@@ -238,7 +249,9 @@ class _AlgebraPageState extends State<AlgebraPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const AlgebraFormulaPage()),
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const AlgebraFormulaPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),
@@ -266,7 +279,9 @@ class _AlgebraPageState extends State<AlgebraPage> {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (builder) => const AlgebraVideoPage()),
+                              MaterialPageRoute(
+                                  builder: (builder) =>
+                                      const AlgebraVideoPage()),
                             );
                           },
                           borderRadius: BorderRadius.circular(30),
