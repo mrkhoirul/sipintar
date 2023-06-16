@@ -4,10 +4,13 @@ import 'course.dart';
 import 'mycourse.dart';
 
 class BottomNavigationBarPage extends StatefulWidget {
-  const BottomNavigationBarPage({super.key});
+  // final String email;
+  final String username;
+  const BottomNavigationBarPage({super.key, required this.username});
 
   @override
-  State<BottomNavigationBarPage> createState() => BottomNavigationBarPageState();
+  State<BottomNavigationBarPage> createState() =>
+      BottomNavigationBarPageState();
 }
 
 class BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
@@ -22,12 +25,12 @@ class BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
           key: navbar,
           onGenerateRoute: route,
         ),
-        bottomNavigationBar: widgetBottomNavbar(),
+        bottomNavigationBar: widgetBottomNavbar(context),
       ),
     );
   }
 
-  Widget widgetBottomNavbar() {
+  Widget widgetBottomNavbar(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       unselectedItemColor: Colors.grey,
@@ -69,7 +72,7 @@ class BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
         });
       default:
         return MaterialPageRoute(builder: (context) {
-          return const HomePage();
+          return HomePage(username: widget.username);
         });
     }
   }

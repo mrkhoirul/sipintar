@@ -1,16 +1,12 @@
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 import 'package:get/get.dart';
 import 'users/login.dart';
-import 'mapel/it.dart';
-import 'mapel/science.dart';
-import 'mapel/math.dart';
 import 'users/profile.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String username;
+  const HomePage({super.key, required this.username});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -19,6 +15,22 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   static final List<String> img = ['event.jpg', 'even.jpeg', 'event3.jpg'];
   int index = 0;
+
+  late double width;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.username.length <= 9) {
+      width = 160.0;
+    } else if (widget.username.length <= 13) {
+      width = 190.0;
+    } else if (widget.username.length <= 20) {
+      width = 230.0;
+    }
+    // ignore: avoid_print
+    print(width);
+  }
 
   Widget homeScreen(context) {
     return SafeArea(
@@ -69,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                           Padding(
                               padding: const EdgeInsets.only(top: 5.0),
                               child: Container(
-                                width: 120.0,
+                                width: width,
                                 alignment: Alignment.topRight,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(25),
@@ -136,17 +148,17 @@ class _HomePageState extends State<HomePage> {
                                           ]);
                                     },
                                     child: Row(
-                                      children: const [
+                                      children: [
                                         Padding(
-                                            padding: EdgeInsets.only(
+                                            padding: const EdgeInsets.only(
                                                 left: 10.0, right: 10.0),
                                             child: Text(
-                                              'Hai, user!',
-                                              style: TextStyle(
+                                              'Hai, ${widget.username}!',
+                                              style: const TextStyle(
                                                   color: Color(0xFF22355C),
                                                   fontWeight: FontWeight.bold),
                                             )),
-                                        Icon(
+                                        const Icon(
                                           Icons.person,
                                           color: Color(0xFF22355C),
                                           size: 30,
@@ -353,8 +365,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ])),
                         // Konten untuk Tab 2
-                         Container(
-                            child: ListView(children: [
+                        ListView(children: [
                           ListTile(
                             leading: Container(
                               height: 50,
@@ -468,10 +479,9 @@ class _HomePageState extends State<HomePage> {
                               // }
                             },
                           ),
-                        ])),
+                        ]),
                         // Konten untuk Tab 3
-                         Container(
-                            child: ListView(children: [
+                        ListView(children: [
                           ListTile(
                             leading: Container(
                               height: 50,
@@ -479,8 +489,7 @@ class _HomePageState extends State<HomePage> {
                               decoration: const BoxDecoration(
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
-                                    image:
-                                        AssetImage('assets/images/it1.jpg'),
+                                    image: AssetImage('assets/images/it1.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -508,8 +517,7 @@ class _HomePageState extends State<HomePage> {
                               decoration: const BoxDecoration(
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
-                                    image:
-                                        AssetImage('assets/images/it2.png'),
+                                    image: AssetImage('assets/images/it2.png'),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -537,8 +545,7 @@ class _HomePageState extends State<HomePage> {
                               decoration: const BoxDecoration(
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
-                                    image:
-                                        AssetImage('assets/images/it3.jpg'),
+                                    image: AssetImage('assets/images/it3.jpg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -566,8 +573,7 @@ class _HomePageState extends State<HomePage> {
                               decoration: const BoxDecoration(
                                 color: Color.fromARGB(255, 26, 33, 27),
                                 image: DecorationImage(
-                                    image:
-                                        AssetImage('assets/images/it4.png'),
+                                    image: AssetImage('assets/images/it4.png'),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -585,7 +591,7 @@ class _HomePageState extends State<HomePage> {
                               // }
                             },
                           ),
-                        ])),
+                        ]),
                       ],
                     ),
                   ),
