@@ -15,6 +15,19 @@ class MathPage extends StatefulWidget {
 }
 
 class _MathPageState extends State<MathPage> {
+  late double width;
+
+  @override
+  void initState() {
+    super.initState();
+    if (global.username.length <= 9) {
+      width = 160.0;
+    } else if (global.username.length <= 13) {
+      width = 190.0;
+    } else if (global.username.length <= 20) {
+      width = 230.0;
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +81,7 @@ class _MathPageState extends State<MathPage> {
                           Padding(
                             padding: const EdgeInsets.only(top: 5.0),
                             child: Container(
-                              width: 120.0,
+                              width: width,
                               alignment: Alignment.topRight,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(25),

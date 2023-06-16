@@ -15,6 +15,7 @@ class ChemistryVideoPage extends StatefulWidget {
 class _ChemistryVideoPageState extends State<ChemistryVideoPage> {
   late VideoPlayerController _controller;
   double _sliderValue = 0.0;
+  late double width;
 
   @override
   void initState() {
@@ -28,6 +29,13 @@ class _ChemistryVideoPageState extends State<ChemistryVideoPage> {
         _sliderValue = _controller.value.position.inSeconds.toDouble();
       });
     });
+    if (global.username.length <= 9) {
+      width = 160.0;
+    } else if (global.username.length <= 13) {
+      width = 190.0;
+    } else if (global.username.length <= 20) {
+      width = 230.0;
+    }
   }
 
   @override
@@ -102,7 +110,7 @@ class _ChemistryVideoPageState extends State<ChemistryVideoPage> {
                           Padding(
                             padding: const EdgeInsets.only(top: 5.0),
                             child: Container(
-                              width: 120.0,
+                              width: width,
                               alignment: Alignment.topRight,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(25),
