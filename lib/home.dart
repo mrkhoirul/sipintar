@@ -28,6 +28,8 @@ class _HomePageState extends State<HomePage> {
     } else if (widget.username.length <= 20) {
       width = 230.0;
     }
+    // ignore: avoid_print
+    print(width);
   }
 
   Widget homeScreen(context) {

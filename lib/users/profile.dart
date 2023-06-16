@@ -68,7 +68,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Stack(
+                            Row(
                               children: [
                                 Container(
                                   alignment: Alignment.center,
@@ -78,35 +78,13 @@ class _ProfilePageState extends State<ProfilePage> {
                                           color: Colors.black,
                                           style: BorderStyle.solid,
                                           width: 2),
-                                      color: const Color.fromARGB(
-                                          255, 243, 237, 217)),
+                                      color:
+                                          const Color.fromARGB(255, 243, 237, 217)),
                                   child: const Icon(
                                     Icons.person,
                                     color: Colors.black,
                                     size: 150,
                                   ),
-                                ),
-                                Positioned(
-                                  right: 0,
-                                  bottom: 0,
-                                  child: TextButton(
-                                      style: TextButton.styleFrom(
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadiusDirectional.circular(
-                                                  60),
-                                          side: const BorderSide(
-                                              color: Colors.black),
-                                        ),
-                                        iconColor: Colors.black,
-                                        backgroundColor:
-                                            const Color(0xFFF5F6F9),
-                                      ),
-                                      onPressed: () {
-                                        // _editProfile();
-                                      },
-                                      child: const Icon(
-                                          Icons.camera_alt_outlined)),
                                 ),
                               ],
                             ),
