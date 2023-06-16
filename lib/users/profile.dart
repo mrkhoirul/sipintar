@@ -64,7 +64,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Row(
+                            Stack(
                               children: [
                                 Container(
                                   alignment: Alignment.center,
