@@ -54,27 +54,25 @@ class _AlgebraTheoryPageState extends State<AlgebraTheoryPage> {
                             Row(
                               children: [
                                 Container(
-                                  alignment: Alignment.topLeft,
-                                  height: 45,
-                                  width: 45,
-                                  decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                          "assets/images/SiPintar.png"),
-                                    ),
+                                alignment: Alignment.topLeft,
+                                child: GestureDetector(
+                                  onTap: () => Navigator.pop(context),
+                                  child: const Icon(
+                                    Icons.arrow_back,
+                                    color: Color.fromARGB(255, 140, 199, 254),
+                                    size: 30,
                                   ),
                                 ),
-                                const SizedBox(
-                                  width: 5,
+                              ),
+                              const SizedBox(width: 5),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Image.asset(
+                                  'assets/images/SiPintar.png',
+                                  width: 50,
+                                  height: 50,
                                 ),
-                                const Text(
-                                  "SiPintar",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
+                              )
                               ],
                             ),
                             Padding(

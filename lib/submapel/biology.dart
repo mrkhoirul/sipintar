@@ -58,24 +58,22 @@ class _BiologyPageState extends State<BiologyPage> {
                             children: [
                               Container(
                                 alignment: Alignment.topLeft,
-                                height: 60,
-                                width: 60,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/SiPintar.png"),
+                                child: GestureDetector(
+                                  onTap: () => Navigator.pop(context),
+                                  child: const Icon(
+                                    Icons.arrow_back,
+                                    color: Color.fromARGB(255, 140, 199, 254),
+                                    size: 30,
                                   ),
                                 ),
                               ),
-                              const SizedBox(
-                                width: 5,
-                              ),
-                              const Text(
-                                "SiPintar",
-                                style: TextStyle(
-                                  color: Color(0xFF021E35),
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
+                              const SizedBox(width: 5),
+                              Container(
+                                alignment: Alignment.center,
+                                child: Image.asset(
+                                  'assets/images/SiPintar.png',
+                                  width: 50,
+                                  height: 50,
                                 ),
                               )
                             ],
