@@ -385,6 +385,35 @@ class _ProfilePageState extends State<ProfilePage> {
                                         body: 'Data gagal diupdate');
                                   });
                                 }
+                              } else if (emailController.text != global.email) {
+                                var tempEmail = await checkEmail(
+                                    emailController.text);
+                                // ignore: unrelated_type_equality_checks
+                                if (usernameController.text == tempEmail) {
+                                  LocalNotificationService().showNotif(
+                                      title: 'Update Data Gagal',
+                                      body:
+                                          'Email telah tersedia, silahkan ganti email lain.');
+                                  Get.forceAppUpdate();
+                                } else {
+                                  users.doc(global.documentId).update({
+                                    'username': usernameController.text,
+                                    'email': emailController.text,
+                                    'password': passwordController.text
+                                  }).then((value) {
+                                    LocalNotificationService().showNotif(
+                                        title: 'Update Data Berhasil',
+                                        body: 'Data telah berhasil diupdate');
+                                    global.username = usernameController.text;
+                                    global.email = emailController.text;
+                                    global.password = passwordController.text;
+                                    Get.forceAppUpdate();
+                                  }).catchError((error) {
+                                    LocalNotificationService().showNotif(
+                                        title: 'Update Data Gagal',
+                                        body: 'Data gagal diupdate');
+                                  });
+                                }
                               }
                             },
                             child: const Text('Update',
