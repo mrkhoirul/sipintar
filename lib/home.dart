@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'users/login.dart';
 import 'users/profile.dart';
 import 'global.dart' as global;
@@ -271,11 +272,10 @@ class _HomePageState extends State<HomePage> {
                             ),
                             trailing: const Icon(Icons.arrow_forward),
                             onTap: () async {
-                              const url =
-                                  'https://bali.tribunnews.com/2023/06/15/kunci-jawaban-matematika-kelas-7-semester-2-uji-kompetensi-7-halaman-178-179-180-uraian';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              const url = 'https://bali.tribunnews.com/2023/06/15/kunci-jawaban-matematika-kelas-7-semester-2-uji-kompetensi-7-halaman-178-179-180-uraian';
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -302,9 +302,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -331,9 +331,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -360,9 +360,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://www.utakatikotak.com/Fakta-Unik-Matematika-Bikin-Mikir-Panjang/kongkow/detail/15568';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                         ])),
@@ -389,9 +389,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://edukasi.okezone.com/read/2022/01/24/623/2536939/11-fakta-menakjubkan-tentang-sains';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -418,9 +418,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://peristiwa.info/10613/fakta-fakta-unik-sains-yang-belum-banyak-diketahui-penasaran-yuk-cek-sekarang/';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -447,9 +447,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://www.detik.com/edu/detikpedia/d-6538792/10-fakta-sains-tentang-otak-manusia-kamu-sudah-tahu';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -476,9 +476,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://berita.99.co/fakta-unik-dunia-sains/';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                         ]),
@@ -504,9 +504,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://bbpmpjateng.kemdikbud.go.id/chat-gpt-berkah-atau-musibah/';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -532,9 +532,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://toghr.com/it-dan-telekomunikasi/';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -560,9 +560,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://www.idntimes.com/life/career/muhammad-tarmizi-murdianto/fakta-perkembangan-it-di-indonesia';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                           const SizedBox(
@@ -588,9 +588,9 @@ class _HomePageState extends State<HomePage> {
                             onTap: () async {
                               const url =
                                   'https://blog.klob.id/2022/06/17/apa-aja-sih-plus-minus-kerja-di-bidang-it/';
-                              // if (!await launchUrl(Uri.parse(url))) {
-                              //   throw 'Could not launch $url';
-                              // }
+                              if (!await launchUrl(Uri.parse(url))) {
+                                throw 'Could not launch $url';
+                              }
                             },
                           ),
                         ]),
