@@ -50,9 +50,9 @@ class _ProfilePageState extends State<ProfilePage> {
       return '';
     }
 
-    Future<String> checkEmail(String username) async {
+    Future<String> checkEmail(String email) async {
       final QuerySnapshot result =
-          await users.where("username", isEqualTo: username).get();
+          await users.where("email", isEqualTo: email).get();
       final List<DocumentSnapshot> documents = result.docs;
       for (var element in documents) {
         Map<String, dynamic> datae = element.data() as Map<String, dynamic>;
@@ -365,7 +365,6 @@ class _ProfilePageState extends State<ProfilePage> {
                                       title: 'Update Data Gagal',
                                       body:
                                           'Username telah tersedia, silahkan ganti username lain.');
-                                  Get.forceAppUpdate();
                                 } else {
                                   users.doc(global.documentId).update({
                                     'username': usernameController.text,
@@ -386,15 +385,14 @@ class _ProfilePageState extends State<ProfilePage> {
                                   });
                                 }
                               } else if (emailController.text != global.email) {
-                                var tempEmail = await checkEmail(
-                                    emailController.text);
+                                var tempEmail =
+                                    await checkEmail(emailController.text);
                                 // ignore: unrelated_type_equality_checks
-                                if (usernameController.text == tempEmail) {
+                                if (emailController.text == tempEmail) {
                                   LocalNotificationService().showNotif(
                                       title: 'Update Data Gagal',
                                       body:
                                           'Email telah tersedia, silahkan ganti email lain.');
-                                  Get.forceAppUpdate();
                                 } else {
                                   users.doc(global.documentId).update({
                                     'username': usernameController.text,
