@@ -37,6 +37,30 @@ class _ProfilePageState extends State<ProfilePage> {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
     CollectionReference users = firestore.collection('users');
 
+    Future<String> checkUsername(String username) async {
+      final QuerySnapshot result =
+          await users.where("username", isEqualTo: username).get();
+      final List<DocumentSnapshot> documents = result.docs;
+      for (var element in documents) {
+        Map<String, dynamic> datae = element.data() as Map<String, dynamic>;
+        if (datae['username'] == username) {
+          return datae['username'];
+        }
+      }
+      return '';
+    }
+
+    Future<String> checkEmail(String username) async {
+      final QuerySnapshot result =
+          await users.where("username", isEqualTo: username).get();
+      final List<DocumentSnapshot> documents = result.docs;
+      for (var element in documents) {
+        Map<String, dynamic> datae = element.data() as Map<String, dynamic>;
+        return datae['email'];
+      }
+      return '';
+    }
+
     return Scaffold(
       backgroundColor: const Color(0xFF8CC7FE),
       body: SafeArea(
@@ -331,24 +355,37 @@ class _ProfilePageState extends State<ProfilePage> {
                               padding: const EdgeInsets.all(12),
                               backgroundColor: const Color(0xFF22355C),
                             ),
-                            onPressed: () {
-                              users.doc(global.documentId).update({
-                                'username': usernameController.text,
-                                'email': emailController.text,
-                                'password': passwordController.text
-                              }).then((value) {
-                                LocalNotificationService().showNotif(
-                                    title: 'Update Data Berhasil',
-                                    body: 'Data telah berhasil diupdate');
-                                global.username = usernameController.text;
-                                global.email = emailController.text;
-                                global.password = passwordController.text;
-                                Get.forceAppUpdate();
-                              }).catchError((error) {
-                                LocalNotificationService().showNotif(
-                                    title: 'Update Data Gagal',
-                                    body: 'Data gagal diupdate');
-                              });
+                            onPressed: () async {
+                              if (usernameController.text != global.username) {
+                                var tempUsername = await checkUsername(
+                                    usernameController.text);
+                                // ignore: unrelated_type_equality_checks
+                                if (usernameController.text == tempUsername) {
+                                  LocalNotificationService().showNotif(
+                                      title: 'Update Data Gagal',
+                                      body:
+                                          'Username telah tersedia, silahkan ganti username lain.');
+                                  Get.forceAppUpdate();
+                                } else {
+                                  users.doc(global.documentId).update({
+                                    'username': usernameController.text,
+                                    'email': emailController.text,
+                                    'password': passwordController.text
+                                  }).then((value) {
+                                    LocalNotificationService().showNotif(
+                                        title: 'Update Data Berhasil',
+                                        body: 'Data telah berhasil diupdate');
+                                    global.username = usernameController.text;
+                                    global.email = emailController.text;
+                                    global.password = passwordController.text;
+                                    Get.forceAppUpdate();
+                                  }).catchError((error) {
+                                    LocalNotificationService().showNotif(
+                                        title: 'Update Data Gagal',
+                                        body: 'Data gagal diupdate');
+                                  });
+                                }
+                              }
                             },
                             child: const Text('Update',
                                 style: TextStyle(color: Colors.white)),
