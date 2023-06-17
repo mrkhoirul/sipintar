@@ -58,6 +58,27 @@ class _LoginPageState extends State<LoginPage> {
       return '';
     }
 
+    Future<String> checkEmail(String username) async {
+      final QuerySnapshot result =
+          await users.where("username", isEqualTo: username).get();
+      final List<DocumentSnapshot> documents = result.docs;
+      for (var element in documents) {
+        Map<String, dynamic> datae = element.data() as Map<String, dynamic>;
+        return datae['email'];
+      }
+      return '';
+    }
+
+    Future<String> getDocumentId(String username) async {
+      final QuerySnapshot result =
+          await users.where("username", isEqualTo: username).get();
+      final List<DocumentSnapshot> documents = result.docs;
+      for (var element in documents) {
+        return element.id;
+      }
+      return '';
+    }
+
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
@@ -126,6 +147,8 @@ class _LoginPageState extends State<LoginPage> {
           onPressed: () async {
             var usernameFire = await checkUsername(usernameController.text);
             var passwordFire = await checkPassword(passwordController.text);
+            var emailFire = await checkEmail(usernameController.text);
+            var documentId = await getDocumentId(usernameController.text);
             if (usernameController.text == '') {
               LocalNotificationService().showNotif(
                   title: 'Login Gagal', body: 'Username masih kosong.');
@@ -144,6 +167,9 @@ class _LoginPageState extends State<LoginPage> {
                     title: 'Login Berhasil',
                     body: 'Login telah berhasil dilakukan!');
                 global.username = usernameFire;
+                global.email = emailFire;
+                global.password = passwordFire;
+                global.documentId = documentId;
                 // ignore: use_build_context_synchronously
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const BottomNavigationBarPage();

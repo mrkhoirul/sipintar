@@ -212,7 +212,7 @@ class _MyCoursePageState extends State<MyCoursePage> {
             const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
-                "MyCourse",
+                "My Course",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,

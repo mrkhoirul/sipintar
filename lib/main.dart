@@ -30,7 +30,7 @@ class SiPintarApp extends StatelessWidget {
 
   MaterialColor floatingColorLabelStyle =
       const MaterialColor(0xFF2946DA, <int, Color>{
-    50: Color(0xFF22355C),
+    50: Color(0xFF2946DA),
     100: Color(0xFF2946DA),
     200: Color(0xFF2946DA),
     300: Color(0xFF2946DA),
@@ -52,7 +52,7 @@ class SiPintarApp extends StatelessWidget {
           fontFamily: 'Montserrat',
           inputDecorationTheme: InputDecorationTheme(
             floatingLabelStyle: TextStyle(
-                color: floatingColorLabelStyle, fontWeight: FontWeight.bold), 
+                color: mainAppColor, fontWeight: FontWeight.bold), 
           ),
           textTheme: const TextTheme(
               titleMedium: TextStyle(color: Color(0xFF8CC7FE)))),

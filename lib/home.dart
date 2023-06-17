@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                                             PopupMenuItem(
                                                 value: 'profile',
                                                 onTap: () =>
-                                                    Get.to(const ProfilePage()),
+                                                    Get.to(() => const ProfilePage()),
                                                 child: Row(
                                                   children: const [
                                                     Icon(
